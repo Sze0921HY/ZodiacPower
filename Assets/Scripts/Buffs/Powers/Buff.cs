@@ -1,0 +1,14 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Buff", menuName = "Scriptable Objects/BuffParent")]
+public class Buff : ScriptableObject
+{
+
+    public BuffEnum CurrentBuff;
+
+    public string buffDescription;
+
+    public virtual void Apply(CarStats stats) { }
+
+
+}
