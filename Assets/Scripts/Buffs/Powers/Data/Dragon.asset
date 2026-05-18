@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Dragon
   m_EditorClassIdentifier: Assembly-CSharp::DragonBuff
   CurrentBuff: 4
-  buffDescription: 
+  buffDescription: 2

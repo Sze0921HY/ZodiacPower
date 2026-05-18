@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Rabbit
   m_EditorClassIdentifier: Assembly-CSharp::RabbitBuff
   CurrentBuff: 0
-  buffDescription: 
+  buffDescription: 9

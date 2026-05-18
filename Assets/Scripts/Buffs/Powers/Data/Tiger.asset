@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tiger
   m_EditorClassIdentifier: Assembly-CSharp::TigerBuff
   CurrentBuff: 2
-  buffDescription: 
+  buffDescription: 1234

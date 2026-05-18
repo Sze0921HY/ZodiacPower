@@ -1623,6 +1623,7 @@ MonoBehaviour:
   BuffPool: []
   offeredBuffList: []
   player: {fileID: 1996248569}
+  UImanager: {fileID: 1611048336}
 --- !u!4 &1611048335
 Transform:
   m_ObjectHideFlags: 0
@@ -1664,6 +1665,7 @@ MonoBehaviour:
   - {fileID: 1701623988}
   - {fileID: 1749565187}
   - {fileID: 1863833643}
+  currentDescriptionIndex: 0
 --- !u!1 &1623052036
 GameObject:
   m_ObjectHideFlags: 0

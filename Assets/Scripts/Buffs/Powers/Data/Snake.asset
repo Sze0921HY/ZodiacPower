@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Snake
   m_EditorClassIdentifier: Assembly-CSharp::SnakeBuff
   CurrentBuff: 5
-  buffDescription: 
+  buffDescription: 14523

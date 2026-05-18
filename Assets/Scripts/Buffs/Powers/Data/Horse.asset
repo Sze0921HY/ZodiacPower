@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Horse
   m_EditorClassIdentifier: Assembly-CSharp::HorseBuff
   CurrentBuff: 6
-  buffDescription: 
+  buffDescription: 4
   multiplier: 1.4

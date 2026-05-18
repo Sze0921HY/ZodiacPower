@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Dog
   m_EditorClassIdentifier: Assembly-CSharp::DogBuff
   CurrentBuff: 10
-  buffDescription: 
+  buffDescription: 1

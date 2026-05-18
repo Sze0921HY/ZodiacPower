@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Goat
   m_EditorClassIdentifier: Assembly-CSharp::GoatBuff
   CurrentBuff: 7
-  buffDescription: 
+  buffDescription: 3

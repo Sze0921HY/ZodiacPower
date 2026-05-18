@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Monkey
   m_EditorClassIdentifier: Assembly-CSharp::MonkeyBuff
   CurrentBuff: 8
-  buffDescription: 
+  buffDescription: 5

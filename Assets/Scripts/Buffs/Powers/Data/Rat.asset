@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615bb2033004dac4389fa1485035ba2f, type: 3}
   m_Name: Rat
   m_EditorClassIdentifier: Assembly-CSharp::RatBuff
-  buffName: 
+  CurrentBuff: 0
+  buffDescription: 00
   multiplier: 1.2
