@@ -5,16 +5,21 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public BuffManager buffManager;
     public GameObject LevelUpPanel;
     public List<Button> buttonList;
     public List<TextMeshProUGUI> buffnameList;
     public List<TextMeshProUGUI> descriptionsList;
 
+    //References
+    private BuffManager buffManager;
+
+
     public int currentDescriptionIndex = 0;
 
     void Start()
     {
+        buffManager = GetComponent<BuffManager>();
+
         for (int i = 0; i < buttonList.Count; i++)
         {
             int index = i;

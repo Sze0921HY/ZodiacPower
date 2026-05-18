@@ -1,3 +1,4 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -74,4 +75,40 @@ public class CarController : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Object tempObject = collision.gameObject.GetComponent<Object>();
+
+            switch (tempObject.TierObject)
+            {
+                case ObjectEnum.Tier1:
+                    Debug.Log("Touching Tier 1 object");
+                    break;
+                case ObjectEnum.Tier2:
+
+                    break;
+                case ObjectEnum.Tier3:
+
+                    break;
+                case ObjectEnum.Tier4:
+
+                    break;
+                case ObjectEnum.Tier5:
+
+                    break;
+                case ObjectEnum.Tier6:
+
+                    break;
+            }
+        }
+        else
+        {
+
+        }
+    }
+
+
 }
