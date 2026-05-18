@@ -5,5 +5,6 @@ public class RoosterBuff: Buff
 {
     public override void Apply(CarStats stats)
     {
+        
     }
 }

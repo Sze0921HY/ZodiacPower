@@ -8,8 +8,11 @@ public class BuffManager : MonoBehaviour
     public List<Buff> BuffPool;
     public List<Buff> offeredBuffList;
 
-    public CarStats player;
+    public GameObject player;
     public UIManager UImanager;
+
+    private CarStats carSats;
+    private CarBuff carBuff;
 
     void Awake()
     {
@@ -19,7 +22,8 @@ public class BuffManager : MonoBehaviour
 
     private void Start()
     {
-
+        carSats = player.GetComponent<CarStats>();
+        carBuff = player.GetComponent<CarBuff>();
     }
 
 
@@ -59,7 +63,9 @@ public class BuffManager : MonoBehaviour
     {
         Buff buff = offeredBuffList[index];
 
-        buff.Apply(player);
+        buff.Apply(carSats);
+
+        carBuff.AssignBuff(buff);
 
         BuffPool.Remove(buff);
 
