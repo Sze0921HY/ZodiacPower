@@ -4,15 +4,21 @@ using UnityEngine.InputSystem;
 
 public class CarStats : MonoBehaviour
 {
+    public GameObject Doggy;
+    public GameObject Dragon;
+
     public float speed = 10f;
     public float scoreMultiplier = 1f;
     public float size = 1f;
     public float width = 1f;
+    public float jump = 1f;
 
 
     //Testing Purpose//
     private Vector2 moveInput;
     private Rigidbody rb;
+    public UIManager UImanager;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,12 +44,13 @@ public class CarStats : MonoBehaviour
     //Testing Purpose//
     public void OnLevelUp(InputValue value)
     {
-        Debug.Log("Level Up");
+        UImanager.showLevelUpPanel();
     }
 
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
     }
+
 
 }
