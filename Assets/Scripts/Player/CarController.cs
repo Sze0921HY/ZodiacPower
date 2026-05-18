@@ -14,6 +14,10 @@ public class CarController : MonoBehaviour
     public InputActionAsset inputActions;
     private InputAction moveAction;
 
+    [Header("References")]
+    public PointManager pointMangaer;
+    public LevelManager levelManager;
+
     private Rigidbody rb;
     private Vector2 moveInput;
 
@@ -76,33 +80,26 @@ public class CarController : MonoBehaviour
         }
     }
 
+
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Object tempObject = collision.gameObject.GetComponent<Object>();
 
-            switch (tempObject.TierObject)
+            int tierIndex = (int)tempObject.TierObject;
+
+            if (levelManager.TierBool[tierIndex])
             {
-                case ObjectEnum.Tier1:
-                    Debug.Log("Touching Tier 1 object");
-                    break;
-                case ObjectEnum.Tier2:
-
-                    break;
-                case ObjectEnum.Tier3:
-
-                    break;
-                case ObjectEnum.Tier4:
-
-                    break;
-                case ObjectEnum.Tier5:
-
-                    break;
-                case ObjectEnum.Tier6:
-
-                    break;
+                Debug.Log("Touched Tier:" + tierIndex);
+                pointMangaer.addPoint(tempObject);
             }
+            else
+            {
+                Debug.Log("Player not enough tier to booo this");
+            }
+
         }
         else
         {

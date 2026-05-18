@@ -1,15 +1,29 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header("References")]
     public PointManager pointManger;
-    public int CurrentTier = 0;
 
+    [Header("Level Setting")]
+    public int CurrentTier = 0;
+    [SerializeField]
+    private int MaxTier;
+    public List<bool> TierBool;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        MaxTier = 6;
+        TierBool = new List<bool>();
+        for (int i = 0; i < MaxTier; i++)
+        {
+            TierBool.Add(false);
+        }
+
+        updateTier(CurrentTier);
     }
 
     // Update is called once per frame
@@ -19,28 +33,8 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    public void Tier(int index)
+    public void updateTier(int index)
     {
-        switch (CurrentTier)
-        {
-            case 0:
-
-                break;
-
-            case 1:
-                break;
-
-            case 2:
-                break;
-
-            case 3:
-                break;
-
-            case 4:
-                break;
-
-            case 5:
-                break;
-        }
+        TierBool[index] = true;
     }
 }

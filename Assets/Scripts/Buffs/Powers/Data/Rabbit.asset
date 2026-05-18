@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1205cbf423d0794098b3a192bcd9efa, type: 3}
   m_Name: Rabbit
   m_EditorClassIdentifier: Assembly-CSharp::RabbitBuff
-  CurrentBuff: 0
+  CurrentBuff: 3
   buffDescription: 9
+  isContinue: 0
