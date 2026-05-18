@@ -6,6 +6,8 @@ public class CarStats : MonoBehaviour
 {
     public GameObject Doggy;
     public GameObject Dragon;
+    public GameObject Rooster;
+
 
     public float speed = 10f;
     public float scoreMultiplier = 1f;
@@ -13,6 +15,8 @@ public class CarStats : MonoBehaviour
     public float width = 1f;
     public float jump = 1f;
 
+    public float RoosterAbility = 5f;
+    public float PigAbility = 5f;
 
     //Testing Purpose//
     private Vector2 moveInput;
@@ -51,6 +55,5 @@ public class CarStats : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
-
 
 }

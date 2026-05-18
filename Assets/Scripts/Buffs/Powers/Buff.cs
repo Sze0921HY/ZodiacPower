@@ -8,6 +8,8 @@ public class Buff : ScriptableObject
 
     public string buffDescription;
 
+    public bool isContinue;
+
     public virtual void Apply(CarStats stats) { }
 
 

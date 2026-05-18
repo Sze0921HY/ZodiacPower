@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OxBuff
   CurrentBuff: 1
   buffDescription: 6
-  multiplier: 1.5
+  multiplier: 2

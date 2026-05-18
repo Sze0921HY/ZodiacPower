@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class BuffManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class BuffManager : MonoBehaviour
 
     private CarStats carSats;
     private CarBuff carBuff;
+
 
     void Awake()
     {
@@ -65,6 +67,16 @@ public class BuffManager : MonoBehaviour
 
         buff.Apply(carSats);
 
+        switch (buff.CurrentBuff)
+        {
+            case BuffEnum.Rooster:
+                StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.RoosterAbility));
+                break;
+            case BuffEnum.Pig:
+                StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.PigAbility));
+                break;
+        }
+
         carBuff.AssignBuff(buff);
 
         BuffPool.Remove(buff);
@@ -73,5 +85,14 @@ public class BuffManager : MonoBehaviour
 
         offeredBuffList.Clear();
         UImanager.ResetUI();
+    }
+
+
+    private IEnumerator RepeatEventBuffDuration(Buff buff, float time)
+    {
+        yield return new WaitForSeconds(time);
+        Debug.Log("5 second");
+        buff.Apply(carSats);
+        StartCoroutine(RepeatEventBuffDuration(buff, time));
     }
 }

@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoosterBuff
   CurrentBuff: 9
   buffDescription: 34123
+  isContinue: 1
+  eggsPrefab: {fileID: 6915685978001341770, guid: 8a91ae39867af5446b2a5474eb93ce5f, type: 3}
+  spawnDuration: 0
