@@ -13,6 +13,8 @@ public class MonkeyBuff: Buff
         int index = Random.Range(0, randomBuffs.Count);
         Buff buff = randomBuffs[index];
 
+        Debug.Log("Monkey random buff is:"+ buff);
+
         buff.Apply(stats);
 
         stats.GetComponent<CarStats>().buffManager.HandleMonkey(buff);
