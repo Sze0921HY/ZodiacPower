@@ -5,19 +5,20 @@ using System.Collections;
 public class SnakeBuff : Buff
 {
     public float radius = 2f;
-    public float pullSpeed = 0.00001f;
-    public float duration = 2f;
-
+    public float pullSpeed = 2f;
     public int maxPullNumber = 2;
 
     public override void Apply(CarStats stats)
     {
+        stats.pullspeed = pullSpeed;
+        stats.maxPullNumber += maxPullNumber;
         stats.StartCoroutine(PullRoutine(stats));
     }
 
     IEnumerator PullRoutine(CarStats stats)
     {
         float r2 = radius * radius;
+
 
         while (true)
         {

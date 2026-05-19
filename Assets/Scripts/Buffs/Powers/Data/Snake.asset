@@ -17,5 +17,4 @@ MonoBehaviour:
   isContinue: 0
   radius: 2
   pullSpeed: 2
-  duration: 2
   maxPullNumber: 2

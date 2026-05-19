@@ -11,6 +11,4 @@ public class Buff : ScriptableObject
     public bool isContinue;
 
     public virtual void Apply(CarStats stats) { }
-
-
 }

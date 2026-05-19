@@ -11,15 +11,19 @@ public class UIManager : MonoBehaviour
     public List<TextMeshProUGUI> descriptionsList;
 
     //References
+    [SerializeField]
     private BuffManager buffManager;
 
 
     public int currentDescriptionIndex = 0;
 
-    void Start()
+    private void Awake()
     {
         buffManager = GetComponent<BuffManager>();
+    }
 
+    void Start()
+    {
         for (int i = 0; i < buttonList.Count; i++)
         {
             int index = i;

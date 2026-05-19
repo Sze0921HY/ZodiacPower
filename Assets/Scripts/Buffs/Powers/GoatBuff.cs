@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ZodiacBuff/Goat")]
 public class GoatBuff: Buff
 {
-    public float extraForce = 100f;
+    public float extraForce = 10f;
 
     public override void Apply(CarStats stats)
     {

@@ -17,6 +17,8 @@ public class CarStats : MonoBehaviour
     public float width = 1f;
     public float jump = 1f;
     public float force = 1f;
+    public float pullspeed = 1f;
+    public int maxPullNumber = 0;
 
     [Header("Event Duration")]
     public float RoosterAbility = 5f;

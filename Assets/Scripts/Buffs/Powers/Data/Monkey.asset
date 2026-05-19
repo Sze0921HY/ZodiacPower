@@ -16,5 +16,5 @@ MonoBehaviour:
   buffDescription: Like gambling? Randomly choose a power from other animal
   isContinue: 0
   randomBuffs:
-  - {fileID: 11400000, guid: 738776cfa6df71c44b4b661caf3be08f, type: 2}
+  - {fileID: 11400000, guid: 2b702013b8c844345907a18ea2b59b2b, type: 2}
   buffManager: {fileID: 0}
