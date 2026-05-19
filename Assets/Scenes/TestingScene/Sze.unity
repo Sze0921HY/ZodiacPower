@@ -1324,7 +1324,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 5910591616530222886}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791636271}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9b448f1fab4a2544be598daf6e03b79, type: 3}
   m_Name: 
@@ -1485,6 +1485,189 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 727.54614, y: 0.575, z: 792.331}
   m_LocalScale: {x: 1, y: 0.17922, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &939845146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939845149}
+  - component: {fileID: 939845148}
+  - component: {fileID: 939845147}
+  m_Layer: 0
+  m_Name: Spline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &939845147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939845146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b74686beb0670a4ea61325c0acf4411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineInstantiate
+  m_Container: {fileID: 939845148}
+  m_ItemsToInstantiate:
+  - prefab: {fileID: 0}
+    Prefab: {fileID: 919132149155446097, guid: fa3f2da2c27083f40b53e0b09dce9363, type: 3}
+    probability: 0
+    Probability: 0
+  m_Method: 1
+  m_Space: 0
+  m_Spacing: {x: 0.32, y: 0.32}
+  m_Up: 1
+  m_Forward: 2
+  m_PositionOffset:
+    setup: 0
+    min: {x: 0, y: 0, z: 0}
+    max: {x: 0, y: 0, z: 0}
+    randomX: 0
+    randomY: 0
+    randomZ: 0
+    space: 0
+  m_RotationOffset:
+    setup: 0
+    min: {x: 0, y: 0, z: 0}
+    max: {x: 0, y: 0, z: 0}
+    randomX: 0
+    randomY: 0
+    randomZ: 0
+    space: 0
+  m_ScaleOffset:
+    setup: 0
+    min: {x: 0, y: 0, z: 0}
+    max: {x: 0, y: 0, z: 0}
+    randomX: 0
+    randomY: 0
+    randomZ: 0
+    space: 0
+  m_DeprecatedInstances: []
+  m_AutoRefresh: 1
+  m_Seed: 1257972098
+--- !u!114 &939845148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939845146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineContainer
+  m_Spline:
+    m_EditModeType: 1
+    m_Knots: []
+    m_MetaData: []
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Splines:
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 0
+        y: 0.029050082
+        z: 0.00018310547
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.4090072
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.450198
+      Rotation:
+        value:
+          x: 0.000000004268271
+          y: 0.8189437
+          z: 0.000000055282722
+          w: 0.57387406
+    - Position:
+        x: -0.40942383
+        y: 0.0000003874302
+        z: -5.2834473
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.6876955
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.4943648
+      Rotation:
+        value:
+          x: -0.0016186668
+          y: 0.8353484
+          z: -0.002459676
+          w: -0.54971296
+    - Position:
+        x: -2.5390625
+        y: 0.00000011920929
+        z: -3.5615234
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.7422442
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.9380461
+      Rotation:
+        value:
+          x: -0.0022747098
+          y: -0.0678393
+          z: -0.00015465212
+          w: 0.9976936
+    m_MetaData:
+    - Mode: 4
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    m_Closed: 1
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Knots:
+    m_KnotsLink: []
+--- !u!4 &939845149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939845146}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 725.175, y: 0.4999499, z: 789.79083}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2930,6 +3113,32 @@ Transform:
   - {fileID: 1549060586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2009399079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 231645562893540862, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
+  m_PrefabInstance: {fileID: 5910591616530222886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2009399083
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009399079}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.196822, y: 7.805574, z: 11.517334}
+  m_Center: {x: -0.31125695, y: -3.4295976, z: -1.4068604}
 --- !u!1001 &5910591616530222886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2938,6 +3147,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3703347868253568514, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
+      propertyPath: m_Size.y
+      value: 13.951498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703347868253568514, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
+      propertyPath: m_Center.y
+      value: -0.0872165
+      objectReference: {fileID: 0}
     - target: {fileID: 6218218633132758809, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
       propertyPath: Rooster
       value: 
@@ -2946,6 +3163,10 @@ PrefabInstance:
       propertyPath: UImanager
       value: 
       objectReference: {fileID: 1611048336}
+    - target: {fileID: 6218218633132758809, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6218218633132758809, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
       propertyPath: buffManager
       value: 
@@ -3017,7 +3238,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 231645562893540862, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2009399083}
   m_SourcePrefab: {fileID: 100100000, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
 --- !u!1001 &7572823452973314617
 PrefabInstance:
@@ -3143,3 +3367,4 @@ SceneRoots:
   - {fileID: 888058485}
   - {fileID: 642524879}
   - {fileID: 408144718}
+  - {fileID: 939845149}
