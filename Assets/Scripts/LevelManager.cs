@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     [Header("References")]
     public PointManager pointManger;
+    public UIManager uiManager;
 
     [Header("Level Setting")]
     public int CurrentTier = 0;
@@ -36,5 +37,6 @@ public class LevelManager : MonoBehaviour
     public void updateTier(int index)
     {
         TierBool[index] = true;
+        uiManager.showLevelUpPanel();
     }
 }

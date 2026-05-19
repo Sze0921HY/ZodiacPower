@@ -30,23 +30,10 @@ public class UIManager : MonoBehaviour
     public void showLevelUpPanel()
     {
         LevelUpPanel.SetActive(true);
-
+        Time.timeScale = 0f;
         buffManager.levelUp();
         
-        //RefreshUI();
     }
-
-/*    void RefreshUI()
-    {
-        for (int i = 0; i < buttonList.Count; i++)
-        {
-            if (i < buffManager.offeredBuffList.Count)
-            {
-                buttonList[i].gameObject.SetActive(true);
-
-            }
-        }
-    }*/
 
     public void buttonClick(int currentButton)
     {

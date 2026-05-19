@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888058479}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1e2f48ccadcdf842a1f6c28c6f3d3eb, type: 3}
   m_Name: 
@@ -2599,7 +2599,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2736,7 +2736,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2873,7 +2873,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -3343,6 +3343,10 @@ PrefabInstance:
       propertyPath: TotalPoint
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8044244125618580350, guid: b015ac745ad22a941939fc96eba5ea10, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 1611048336}
     - target: {fileID: 8493078409494210641, guid: b015ac745ad22a941939fc96eba5ea10, type: 3}
       propertyPath: m_Name
       value: GameManager

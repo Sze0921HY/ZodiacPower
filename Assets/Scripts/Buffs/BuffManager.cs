@@ -94,6 +94,9 @@ public class BuffManager : MonoBehaviour
 
         offeredBuffList.Clear();
         UImanager.ResetUI();
+
+        Time.timeScale = 1f;
+
     }
 
     public void HandleMonkey(Buff buff)
