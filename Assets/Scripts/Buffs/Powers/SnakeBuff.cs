@@ -43,7 +43,7 @@ public class SnakeBuff : Buff
                 if (pulledCount >= maxPullNumber)
                     break;
 
-                Debug.LogWarning(hits);
+                //Debug.LogWarning(hits);
                 Vector3 dir = stats.transform.position - hit.transform.position;
                 dir.y = 0;
 
