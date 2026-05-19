@@ -9,10 +9,22 @@ public class CarController : MonoBehaviour
     public float maxSpeed = 20f;
     public float turnSpeed = 100f;
     public float friction = 0.98f;
+    public float downForce = 1f;
 
     [Header("Input Actions")]
     public InputActionAsset inputActions;
     private InputAction moveAction;
+
+
+    [Header("Wheel References")]
+    public Transform frontLeftWheel;
+    public Transform frontRightWheel;
+    public Transform rearLeftWheel;
+    public Transform rearRightWheel;
+
+    [Header("Wheel Settings")]
+    public float wheelRadius = 0.5f;
+    public float maxSteerAngle = 30f;
 
     [Header("References")]
     public PointManager pointMangaer;
@@ -54,15 +66,25 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Apply forward/backward force
-        if (moveInput.y != 0)
+        // Check if car is upright (prevent flying when flipped)
+        float upAngle = Vector3.Angle(transform.up, Vector3.up);
+        bool isUpright = upAngle < 60f;
+
+        // Apply forward/backward force only when upright
+        if (moveInput.y != 0 && isUpright)
         {
             Vector3 forwardForce = transform.forward * moveInput.y * acceleration;
             rb.AddForce(forwardForce, ForceMode.Acceleration);
         }
 
+        // Apply downforce to keep car grounded
+        if (rb.linearVelocity.magnitude > 1f)
+        {
+            rb.AddForce(-transform.up * downForce, ForceMode.Acceleration);
+        }
 
-        if (rb.linearVelocity.magnitude > 0.5f)
+
+        if (rb.linearVelocity.magnitude > 0.5f && isUpright)
         {
             float turn = moveInput.x * turnSpeed * Time.fixedDeltaTime;
             Quaternion turnRotation = Quaternion.Euler(0, turn, 0);
@@ -77,6 +99,47 @@ public class CarController : MonoBehaviour
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+        }
+
+        // Update wheel rotations
+        UpdateWheels();
+    }
+    void UpdateWheels()
+    {
+        // Calculate steering angle for front wheels
+        float steerAngle = moveInput.x * maxSteerAngle;
+
+        // Rotate front wheels for steering
+        if (frontLeftWheel != null)
+        {
+            frontLeftWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
+        }
+        if (frontRightWheel != null)
+        {
+            frontRightWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
+        }
+
+        // Calculate wheel rotation based on speed (forward/backward)
+        float speed = rb.linearVelocity.magnitude;
+        float speedDirection = Vector3.Dot(rb.linearVelocity, transform.forward);
+        float wheelRotation = (speed * Time.fixedDeltaTime) / wheelRadius * Mathf.Rad2Deg;
+
+        // Apply rotation to all wheels around their X axis so they rotate as the car moves forward or backward
+        if (frontLeftWheel != null)
+        {
+            frontLeftWheel.Rotate(wheelRotation * Mathf.Sign(speedDirection), 0, 0);
+        }
+        if (frontRightWheel != null)
+        {
+            frontRightWheel.Rotate(wheelRotation * Mathf.Sign(speedDirection), 0, 0);
+        }
+        if (rearLeftWheel != null)
+        {
+            rearLeftWheel.Rotate(wheelRotation * Mathf.Sign(speedDirection), 0, 0);
+        }
+        if (rearRightWheel != null)
+        {
+            rearRightWheel.Rotate(wheelRotation * Mathf.Sign(speedDirection), 0, 0);
         }
     }
 
