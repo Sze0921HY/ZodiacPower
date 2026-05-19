@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Goat
   m_EditorClassIdentifier: Assembly-CSharp::GoatBuff
   CurrentBuff: 7
-  buffDescription: 3
+  buffDescription: baaaa, increase fly distance of object hit
+  isContinue: 0

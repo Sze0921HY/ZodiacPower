@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Monkey
   m_EditorClassIdentifier: Assembly-CSharp::MonkeyBuff
   CurrentBuff: 8
-  buffDescription: 5
+  buffDescription: Like gambling? Randomly choose a power from other animal
   isContinue: 0
   randomBuffs:
   - {fileID: 11400000, guid: 738776cfa6df71c44b4b661caf3be08f, type: 2}

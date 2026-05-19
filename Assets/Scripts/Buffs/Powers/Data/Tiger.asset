@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Tiger
   m_EditorClassIdentifier: Assembly-CSharp::TigerBuff
   CurrentBuff: 2
-  buffDescription: 1234
+  buffDescription: The rawr creates an 1.3 area of attack
+  isContinue: 0

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Snake
   m_EditorClassIdentifier: Assembly-CSharp::SnakeBuff
   CurrentBuff: 5
-  buffDescription: 14523
+  buffDescription: Pulling 3 lower or same tier objects to you
+  isContinue: 0

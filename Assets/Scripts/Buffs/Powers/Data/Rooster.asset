@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rooster
   m_EditorClassIdentifier: Assembly-CSharp::RoosterBuff
   CurrentBuff: 9
-  buffDescription: 34123
+  buffDescription: Start laying egg in every 1 min, 150 points to each egg if you
+    run over
   isContinue: 1
   eggsPrefab: {fileID: 6915685978001341770, guid: 8a91ae39867af5446b2a5474eb93ce5f, type: 3}
   spawnDuration: 0

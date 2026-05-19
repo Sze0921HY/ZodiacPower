@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Dragon
   m_EditorClassIdentifier: Assembly-CSharp::DragonBuff
   CurrentBuff: 4
-  buffDescription: 2
+  buffDescription: Powerful Attack To 1.5 In Front
+  isContinue: 0

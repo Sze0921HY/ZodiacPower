@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Ox
   m_EditorClassIdentifier: Assembly-CSharp::OxBuff
   CurrentBuff: 1
-  buffDescription: 6
+  buffDescription: Seems like eating too much, make the car 1.5 wider
+  isContinue: 0
   multiplier: 2

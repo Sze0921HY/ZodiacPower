@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rat
   m_EditorClassIdentifier: Assembly-CSharp::RatBuff
   CurrentBuff: 0
-  buffDescription: 00
+  buffDescription: all points will times 1.2, excluding extra point
   isContinue: 0
   multiplier: 1.2
