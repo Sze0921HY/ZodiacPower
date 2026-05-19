@@ -5,6 +5,13 @@ public class DogBuff: Buff
 {
     public override void Apply(CarStats stats)
     {
-        stats.Doggy.SetActive(true);
+        if (!stats.Doggy.activeSelf)
+        {
+            stats.Doggy.SetActive(true);
+        }
+        else
+        {
+            stats.Doggy2.SetActive(true);
+        }
     }
 }

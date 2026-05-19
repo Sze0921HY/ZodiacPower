@@ -15,3 +15,4 @@ MonoBehaviour:
   CurrentBuff: 7
   buffDescription: baaaa, increase fly distance of object hit
   isContinue: 0
+  extraForce: 10

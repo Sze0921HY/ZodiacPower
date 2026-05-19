@@ -6,6 +6,7 @@ public class CarStats : MonoBehaviour
 {
     [Header("Zodiac References")]
     public GameObject Doggy;
+    public GameObject Doggy2;
     public GameObject Dragon;
     public GameObject Rooster;
 
