@@ -3,7 +3,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     public ObjectEnum TierObject;
-    public float Point;
+    private float Point;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

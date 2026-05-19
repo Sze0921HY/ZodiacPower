@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using System.Runtime.CompilerServices;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -26,8 +28,15 @@ public class CarController : MonoBehaviour
     public float wheelRadius = 0.5f;
     public float maxSteerAngle = 30f;
 
+    [Header("Growth Settings")]
+    public float pointThreshold = 100f;
+    public float growthMultiplier = 0.2f;
+
+    private float growPoint = 0f;
+    private Vector3 originalScale;
+
     [Header("References")]
-    public PointManager pointMangaer;
+    public PointManager pointManager;
     public LevelManager levelManager;
 
     private Rigidbody rb;
@@ -38,6 +47,8 @@ public class CarController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         moveAction = inputActions.FindAction("Move");
+
+        originalScale = transform.localScale;
     }
 
     void OnEnable()
@@ -68,16 +79,17 @@ public class CarController : MonoBehaviour
     {
         // Check if car is upright (prevent flying when flipped)
         float upAngle = Vector3.Angle(transform.up, Vector3.up);
+        // if the angle between the car and world up is less than 60 degrees, we consider it upright enough to move
         bool isUpright = upAngle < 60f;
 
-        // Apply forward/backward force only when upright
+        // can only move when upright
         if (moveInput.y != 0 && isUpright)
         {
             Vector3 forwardForce = transform.forward * moveInput.y * acceleration;
             rb.AddForce(forwardForce, ForceMode.Acceleration);
         }
 
-        // Apply downforce to keep car grounded
+        // Apply downforce to keep car grounded on floor if in air or moving too fast
         if (rb.linearVelocity.magnitude > 1f)
         {
             rb.AddForce(-transform.up * downForce, ForceMode.Acceleration);
@@ -119,7 +131,7 @@ public class CarController : MonoBehaviour
             frontRightWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
         }
 
-        // Calculate wheel rotation based on speed (forward/backward)
+        // if wheel go forward rotate forward, if wheel go backward rotate backward
         float speed = rb.linearVelocity.magnitude;
         float speedDirection = Vector3.Dot(rb.linearVelocity, transform.forward);
         float wheelRotation = (speed * Time.fixedDeltaTime) / wheelRadius * Mathf.Rad2Deg;
@@ -156,7 +168,8 @@ public class CarController : MonoBehaviour
             if (levelManager.TierBool[tierIndex])
             {
                 Debug.Log("Touched Tier:" + tierIndex);
-                pointMangaer.addPoint(tempObject);
+                pointManager.addPoint(tempObject);
+                Grow(tempObject.Point);
             }
             else
             {
@@ -166,9 +179,27 @@ public class CarController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Egg"))
         {
-            pointMangaer.ExtraPoint_Egg();
+            pointManager.ExtraPoint_Egg();
+            Grow(pointManager.Extra_Egg);
         }
     }
+    public void Grow(float pointsEarned)
+    {
+        growPoint += pointsEarned;
 
+        // Check if growPoint exceeds the threshold and grow the car accordingly if points pass the threshold carry over into the next growth
+        while (growPoint >= pointThreshold)
+        {
+            growPoint -= pointThreshold;
+
+            //local scale increase by growth multiplier, so it grows by a percentage of its current size rather than a fixed amount
+            transform.localScale += Vector3.one * growthMultiplier;
+            // Increase next threshold
+            pointThreshold += 500f;
+
+            Debug.Log("Player Grew!");
+            Debug.Log("Next Growth Threshold: " + pointThreshold);
+        }
+    }
 
 }
