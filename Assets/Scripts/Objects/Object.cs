@@ -5,11 +5,26 @@ public class Object : MonoBehaviour
     public ObjectEnum TierObject;
     public float Point;
 
+    public float force = 10f;
+
+    private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         initializedPoint();
+
+
+    }
+
+
+
+    public void FlyAway(Vector3 hitDirection)
+    {
+        rb.linearVelocity = Vector3.zero; // optional reset
+
+        rb.AddForce(hitDirection * force, ForceMode.Impulse);
     }
 
     // Update is called once per frame

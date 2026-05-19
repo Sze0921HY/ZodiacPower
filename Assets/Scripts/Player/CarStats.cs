@@ -6,6 +6,7 @@ public class CarStats : MonoBehaviour
 {
     [Header("Zodiac References")]
     public GameObject Doggy;
+    public GameObject Doggy2;
     public GameObject Dragon;
     public GameObject Rooster;
 
@@ -15,6 +16,7 @@ public class CarStats : MonoBehaviour
     public float size = 1f;
     public float width = 1f;
     public float jump = 1f;
+    public float force = 1f;
 
     [Header("Event Duration")]
     public float RoosterAbility = 5f;

@@ -38,6 +38,7 @@ public class CarController : MonoBehaviour
     [Header("References")]
     public PointManager pointManager;
     public LevelManager levelManager;
+    public CarStats carStats;
 
     private Rigidbody rb;
     private Vector2 moveInput;
@@ -161,13 +162,24 @@ public class CarController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Object tempObject = collision.gameObject.GetComponent<Object>();
+            GameObject enemyObject = collision.gameObject;
+            Object tempObject = enemyObject.GetComponent<Object>();
 
             int tierIndex = (int)tempObject.TierObject;
 
             if (levelManager.TierBool[tierIndex])
             {
                 Debug.Log("Touched Tier:" + tierIndex);
+
+                if (tierIndex == 1|| tierIndex == 2|| tierIndex == 0)
+                {
+                    Rigidbody tempEnemyRb = enemyObject.GetComponent<Rigidbody>();
+                    Vector3 direction = (enemyObject.transform.position - transform.position).normalized;
+                    direction += Vector3.up;
+                    tempEnemyRb.AddForce(direction * carStats.force, ForceMode.Impulse);
+                }
+
+
                 pointManager.addPoint(tempObject);
                 Grow(tempObject.Point);
             }
