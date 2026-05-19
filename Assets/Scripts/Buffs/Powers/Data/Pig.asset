@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigBuff
   CurrentBuff: 11
   buffDescription: 87
+  isContinue: 1
+  pointManager: {fileID: 3142597659215397428, guid: b015ac745ad22a941939fc96eba5ea10, type: 3}

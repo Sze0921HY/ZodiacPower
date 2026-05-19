@@ -4,9 +4,12 @@ public class PointManager : MonoBehaviour
 {
     public LevelManager LevelManager;
     public CarStats carStats;
+    public float TotalPoint;
 
-    [SerializeField]
-    private float TotalPoint;
+    [Header("Extra Points")]
+    public float Extra_Egg = 150;
+    public float Extra_Pig = 50;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +29,17 @@ public class PointManager : MonoBehaviour
         TotalPoint = TotalPoint + objectPoint.Point * carStats.scoreMultiplier;
         checkPoint();
     }
+
+    public void ExtraPoint_Egg()
+    {
+        TotalPoint += Extra_Egg;
+    }
+
+    public void ExtraPoint_Pig()
+    {
+        TotalPoint += Extra_Pig;
+    }
+
 
     public void checkPoint()
     {

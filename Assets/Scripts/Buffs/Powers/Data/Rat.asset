@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatBuff
   CurrentBuff: 0
   buffDescription: 00
+  isContinue: 0
   multiplier: 1.2

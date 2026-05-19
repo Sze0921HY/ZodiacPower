@@ -4,17 +4,19 @@ using UnityEngine.InputSystem;
 
 public class CarStats : MonoBehaviour
 {
+    [Header("Zodiac References")]
     public GameObject Doggy;
     public GameObject Dragon;
     public GameObject Rooster;
 
-
+    [Header("Basic stats Duration")]
     public float speed = 10f;
     public float scoreMultiplier = 1f;
     public float size = 1f;
     public float width = 1f;
     public float jump = 1f;
 
+    [Header("Event Duration")]
     public float RoosterAbility = 5f;
     public float PigAbility = 5f;
 
@@ -23,6 +25,10 @@ public class CarStats : MonoBehaviour
     private Rigidbody rb;
     public UIManager UImanager;
 
+
+    //Refereces
+    public PointManager pointManager;
+    public BuffManager buffManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -101,9 +101,9 @@ public class CarController : MonoBehaviour
             }
 
         }
-        else
+        else if (collision.gameObject.CompareTag("Egg"))
         {
-
+            pointMangaer.ExtraPoint_Egg();
         }
     }
 

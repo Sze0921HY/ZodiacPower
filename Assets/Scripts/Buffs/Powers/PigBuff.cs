@@ -3,8 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ZodiacBuff/Pig")]
 public class PigBuff: Buff
 {
+    public PointManager pointManager;
+
     public override void Apply(CarStats stats)
     {
-        Debug.LogWarning("Pig POWERRRR");
+        stats.pointManager.ExtraPoint_Pig();
     }
 }

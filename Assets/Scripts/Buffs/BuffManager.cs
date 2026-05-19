@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BuffManager : MonoBehaviour
 {
@@ -66,16 +67,24 @@ public class BuffManager : MonoBehaviour
         Buff buff = offeredBuffList[index];
 
         buff.Apply(carSats);
+        Debug.Log($"Unlocked buff: {buff}");
 
-        switch (buff.CurrentBuff)
+
+
+        if (buff.isContinue)
         {
-            case BuffEnum.Rooster:
-                StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.RoosterAbility));
-                break;
-            case BuffEnum.Pig:
-                StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.PigAbility));
-                break;
+            switch (buff.CurrentBuff)
+            {
+                case BuffEnum.Rooster:
+                    StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.RoosterAbility));
+                    break;
+                case BuffEnum.Pig:
+                    StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.PigAbility));
+                    break;
+
+            }
         }
+        
 
         carBuff.AssignBuff(buff);
 
@@ -87,11 +96,25 @@ public class BuffManager : MonoBehaviour
         UImanager.ResetUI();
     }
 
+    public void HandleMonkey(Buff buff)
+    {
+
+        switch (buff.CurrentBuff)
+        {
+            case BuffEnum.Rooster:
+                StartCoroutine(RepeatEventBuffDuration(buff, carSats.RoosterAbility));
+                break;
+
+            case BuffEnum.Pig:
+                StartCoroutine(RepeatEventBuffDuration(buff, carSats.PigAbility));
+                break;
+        }
+    }
 
     private IEnumerator RepeatEventBuffDuration(Buff buff, float time)
     {
         yield return new WaitForSeconds(time);
-        Debug.Log("5 second");
+        Debug.Log($"Current buff: {buff}, Duration: {time}");
         buff.Apply(carSats);
         StartCoroutine(RepeatEventBuffDuration(buff, time));
     }
