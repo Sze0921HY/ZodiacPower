@@ -95,7 +95,7 @@ public class CarController : MonoBehaviour
         if (isGround) 
         {
             isGround = false;
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce * carStats.jump, ForceMode.Impulse);
         }
     }
 
