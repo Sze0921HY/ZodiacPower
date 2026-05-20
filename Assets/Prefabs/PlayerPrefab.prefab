@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6974769009597941653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1744586414105771051}
   - component: {fileID: 1086616623080690322}
   - component: {fileID: 690027054019531292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckSuspension
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 5171023751329519965}
   - component: {fileID: 7742656944555911774}
   - component: {fileID: 5580643358776315411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 6128622465470399201}
   - component: {fileID: 5464933959795664292}
   - component: {fileID: 7450928200545932967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466464017300916999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6556197428259051855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rooster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942648573857832112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 5296699019229762902}
   - component: {fileID: 6294838638280241683}
   - component: {fileID: 8929399600745611536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 759800014821068585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7466232050220482223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 8281214395357086929}
   - component: {fileID: 1720141479744253383}
   - component: {fileID: 8299775161236607472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 7718437345367502333}
   - component: {fileID: 8141536731204248727}
   - component: {fileID: 8433769248310877675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 6180109748197767162}
   - component: {fileID: 214950303933067174}
   - component: {fileID: 7688429359166082319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dog (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1648843420576997449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 1397712082864651018}
   - component: {fileID: 5702291844206240975}
   - component: {fileID: 6738338834012745894}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1023,7 +1023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5980127568426912570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 2141824871269543322}
   - component: {fileID: 254220592024900829}
   - component: {fileID: 5010130855685458080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3935958146290143927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 8202575438592489771}
   - component: {fileID: 8002618588070895214}
   - component: {fileID: 4881718340651494765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1267,7 +1267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4560963408355592613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4480509722063447930}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3937138459569686883}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 818810251190498500}
   - component: {fileID: 9114011058117670308}
   - component: {fileID: 205230047546856815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckSuspension
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1459,7 +1459,7 @@ GameObject:
   - component: {fileID: 1072310965789102166}
   - component: {fileID: 8755707552632073703}
   - component: {fileID: 2115666548222031705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dog (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 1684295702993184265}
   - component: {fileID: 7772383918668630838}
   - component: {fileID: 7716327003177424259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckSuspension
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,7 +1642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8291913550207516992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1676,7 +1676,7 @@ GameObject:
   - component: {fileID: 6535169751953264003}
   - component: {fileID: 8759352859053638474}
   - component: {fileID: 8963372453540884635}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1764,7 +1764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1633565376590543500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1798,7 +1798,7 @@ GameObject:
   - component: {fileID: 4888106336118172816}
   - component: {fileID: 467292848084830550}
   - component: {fileID: 7736709210807336350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1886,7 +1886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1155074863559155961}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1920,7 +1920,7 @@ GameObject:
   - component: {fileID: 5787055660041240093}
   - component: {fileID: 2868518201994584763}
   - component: {fileID: 7152585962981672554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2012,7 +2012,7 @@ GameObject:
   - component: {fileID: 8712039932396777019}
   - component: {fileID: 2991231730824247984}
   - component: {fileID: 8615993215979501073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dragon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2125,7 +2125,7 @@ GameObject:
   - component: {fileID: 7489777698330373720}
   - component: {fileID: 8028709453253105321}
   - component: {fileID: 6498519635207305502}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2213,7 +2213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4682716266169963661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2247,7 +2247,7 @@ GameObject:
   - component: {fileID: 4717497176669832823}
   - component: {fileID: 681181870781398949}
   - component: {fileID: 1513273334584157501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2335,7 +2335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4491292575952946753}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2369,7 +2369,7 @@ GameObject:
   - component: {fileID: 8887558577109894677}
   - component: {fileID: 7860298543989546678}
   - component: {fileID: 217836709936167694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2459,7 +2459,7 @@ GameObject:
   - component: {fileID: 7392422022409088394}
   - component: {fileID: 5074574867312447539}
   - component: {fileID: 9206825434354978620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2549,7 +2549,7 @@ GameObject:
   - component: {fileID: 1594666451589327412}
   - component: {fileID: 5891485204937499112}
   - component: {fileID: 5394480318220283745}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruckSuspension
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2643,7 +2643,7 @@ GameObject:
   - component: {fileID: 401887864791012337}
   - component: {fileID: 1492972156711923729}
   - component: {fileID: 3387807130811371944}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2739,7 +2739,8 @@ GameObject:
   - component: {fileID: 6218218633132758809}
   - component: {fileID: 7064291393447710572}
   - component: {fileID: 2751559186356727171}
-  m_Layer: 0
+  - component: {fileID: 9026625366570785216}
+  m_Layer: 6
   m_Name: PlayerPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2917,6 +2918,7 @@ MonoBehaviour:
   Doggy2: {fileID: 4655777259810938291}
   Dragon: {fileID: 5755569924806732859}
   Rooster: {fileID: 959693150541104768}
+  Tiger: {fileID: 9026625366570785216}
   speed: 10
   scoreMultiplier: 1
   size: 1
@@ -2924,7 +2926,7 @@ MonoBehaviour:
   jump: 1
   force: 1
   pullspeed: 2
-  maxPullNumberMultiplier: 0
+  maxPullNumber: 0
   RoosterAbility: 5
   PigAbility: 5
   UImanager: {fileID: 0}
@@ -2952,12 +2954,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8732897226437677558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c634397d122eeb2438623c8d47ae398e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SnakeGizmo
   radius: 2
+--- !u!135 &9026625366570785216
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732897226437677558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 75
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9155860892789836328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2969,7 +2992,7 @@ GameObject:
   - component: {fileID: 1092861921178886315}
   - component: {fileID: 8553163318105555980}
   - component: {fileID: 8927501971156095505}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
