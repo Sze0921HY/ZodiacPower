@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31bf2130f12a584e96c52d4b095053c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  pointText: {fileID: 0}
   LevelUpPanel: {fileID: 0}
   buttonList:
   - {fileID: 0}
@@ -89,6 +90,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  fix: 4
   buffManager: {fileID: 640331855995304067}
   currentDescriptionIndex: 0
 --- !u!114 &8044244125618580350
@@ -121,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PointManager
   LevelManager: {fileID: 8044244125618580350}
+  uiManager: {fileID: 0}
   carStats: {fileID: 6218218633132758809, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
   TotalPoint: 0
   Extra_Egg: 150
