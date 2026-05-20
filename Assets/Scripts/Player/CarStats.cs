@@ -9,6 +9,7 @@ public class CarStats : MonoBehaviour
     public GameObject Doggy2;
     public GameObject Dragon;
     public GameObject Rooster;
+    public SphereCollider Tiger;
 
     [Header("Basic stats Duration")]
     public float speed = 10f;
