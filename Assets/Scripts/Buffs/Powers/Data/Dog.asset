@@ -15,4 +15,4 @@ MonoBehaviour:
   CurrentBuff: 10
   buffDescription: Your best friend, always cheering for you
   isContinue: 0
-  sprite: {fileID: 21300000, guid: 1fbe24d3a234e4746b58374004ad5f9d, type: 3}
+  sprite: {fileID: 21300000, guid: 0233da7826c28f04090dd5e714835b09, type: 3}

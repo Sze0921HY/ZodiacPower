@@ -15,5 +15,5 @@ MonoBehaviour:
   CurrentBuff: 0
   buffDescription: all points will times 1.2, excluding extra point
   isContinue: 0
-  sprite: {fileID: 21300000, guid: 8cfec0ee1360b144db64f017434224a9, type: 3}
+  sprite: {fileID: 21300000, guid: 4aa163ea11e28164a8ed3b06cee533d3, type: 3}
   multiplier: 1.2

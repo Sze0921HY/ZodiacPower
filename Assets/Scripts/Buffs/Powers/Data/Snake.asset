@@ -15,7 +15,7 @@ MonoBehaviour:
   CurrentBuff: 5
   buffDescription: Pulling 3 lower or same tier objects to you
   isContinue: 0
-  sprite: {fileID: 21300000, guid: c71c77b48b4afc64dacf7620858b5812, type: 3}
+  sprite: {fileID: 21300000, guid: 2edd04e9ac0810d4fbd1208c24e174a7, type: 3}
   radius: 2
   pullSpeed: 2
   maxPullNumber: 2
