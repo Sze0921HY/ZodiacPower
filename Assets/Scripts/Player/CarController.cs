@@ -19,6 +19,8 @@ public class CarController : MonoBehaviour
     private InputAction moveAction;
     private InputAction jumpAction;
 
+    [Header("Rotation Recovery")]
+    public float uprightSpeed = 2f;
 
 
     [Header("Wheel References")]
@@ -136,6 +138,25 @@ public class CarController : MonoBehaviour
         {
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
+        // Slowly straighten the car only when grounded
+        if (isGround)
+        {
+            Quaternion targetRotation = Quaternion.Euler(
+                0,
+                transform.eulerAngles.y,
+                0
+            );
+
+            rb.MoveRotation(
+                Quaternion.Slerp(
+                    rb.rotation,
+                    targetRotation,
+                    uprightSpeed * Time.fixedDeltaTime
+                )
+            );
+        }
+
+
 
         // Update wheel rotations
         UpdateWheels();
