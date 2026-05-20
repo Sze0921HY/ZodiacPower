@@ -12,6 +12,7 @@ public class CarController : MonoBehaviour
     public float turnSpeed = 100f;
     public float friction = 0.98f;
     public float downForce = 1f;
+    public float jumpForce = 300f;
 
     [Header("Input Actions")]
     public InputActionAsset inputActions;
@@ -94,7 +95,7 @@ public class CarController : MonoBehaviour
         if (isGround) 
         {
             isGround = false;
-            rb.AddForce(Vector3.up * 300, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
