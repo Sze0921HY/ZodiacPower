@@ -164,6 +164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skyscraper_C
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c53aded6d7561e84fb8ab3d518fa725c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -174,6 +178,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c53aded6d7561e84fb8ab3d518fa725c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3372124039354632477}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c53aded6d7561e84fb8ab3d518fa725c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1002950119329702462}
   m_SourcePrefab: {fileID: 100100000, guid: c53aded6d7561e84fb8ab3d518fa725c, type: 3}
 --- !u!4 &3851653518133813637 stripped
 Transform:
@@ -200,3 +207,30 @@ MonoBehaviour:
   TierObject: 5
   Point: 1000
   force: 10
+--- !u!54 &-1002950119329702462
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483336570154236735}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

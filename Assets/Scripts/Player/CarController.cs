@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -208,24 +209,38 @@ public class CarController : MonoBehaviour
         {
             GameObject enemyObject = collision.gameObject;
             Object tempObject = enemyObject.GetComponent<Object>();
+            Rigidbody tempEnemyRb = enemyObject.GetComponent<Rigidbody>();
+
 
             int tierIndex = (int)tempObject.TierObject;
 
             if (levelManager.TierBool[tierIndex])
             {
-                Debug.Log("Touched Tier:" + tierIndex);
-
-                if (tierIndex == 1|| tierIndex == 2|| tierIndex == 0)
+                if (!tempObject.isTouched)
                 {
-                    Rigidbody tempEnemyRb = enemyObject.GetComponent<Rigidbody>();
-                    Vector3 direction = (enemyObject.transform.position - transform.position).normalized;
-                    direction += Vector3.up;
-                    tempEnemyRb.AddForce(direction * carStats.force, ForceMode.Impulse);
+                    tempObject.isTouched = true;
+                    Debug.Log("Touched Tier:" + tierIndex);
+
+                    tempEnemyRb.isKinematic = false;
+
+
+                    if (tierIndex == 1 || tierIndex == 2 || tierIndex == 0)
+                    {
+                        Vector3 direction = (enemyObject.transform.position - transform.position).normalized;
+                        direction += Vector3.up;
+                        tempEnemyRb.AddForce(direction * carStats.force, ForceMode.Impulse);
+                    }
+                    else
+                    {
+                        Vector3 direction = (enemyObject.transform.position - transform.position).normalized;
+                        direction += Vector3.up;
+                        tempEnemyRb.AddForce(direction, ForceMode.Impulse);
+                    }
+
+
+                    pointManager.addPoint(tempObject);
+                    Grow(tempObject.Point);
                 }
-
-
-                pointManager.addPoint(tempObject);
-                Grow(tempObject.Point);
             }
             else
             {

@@ -9,12 +9,14 @@ public class Object : MonoBehaviour
 
     private Rigidbody rb;
 
+    public bool isTouched;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         initializedPoint();
-
+        isTouched = false;
 
     }
 

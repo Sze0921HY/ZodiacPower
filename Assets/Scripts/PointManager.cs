@@ -46,23 +46,23 @@ public class PointManager : MonoBehaviour
 
     public void checkPoint()
     {
-        if (TotalPoint >= 10000) //10000)
+        if (TotalPoint >= 10000 && LevelManager.CurrentTier < 5) //10000)
         {
             LevelManager.updateTier(5);
         }
-        else if (TotalPoint >= 5000) //5000)
+        else if (TotalPoint >= 5000 && LevelManager.CurrentTier < 4) //5000)
         {
             LevelManager.updateTier(4);
         }
-        else if (TotalPoint >= 1000) //1000)
+        else if (TotalPoint >= 1000 && LevelManager.CurrentTier < 3) //1000)
         {
             LevelManager.updateTier(3);
         }
-        else if (TotalPoint >= 300)//300)
+        else if (TotalPoint >= 300 && LevelManager.CurrentTier < 2)//300)
         {
             LevelManager.updateTier(2);
         }
-        else if (TotalPoint >= 15)//50)
+        else if (TotalPoint >= 15 && LevelManager.CurrentTier < 1)//50)
         {
             LevelManager.updateTier(1);
         }
