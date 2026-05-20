@@ -16,6 +16,8 @@ public class CarController : MonoBehaviour
     [Header("Input Actions")]
     public InputActionAsset inputActions;
     private InputAction moveAction;
+    private InputAction jumpAction;
+
 
 
     [Header("Wheel References")]
@@ -42,14 +44,19 @@ public class CarController : MonoBehaviour
 
     private Rigidbody rb;
     private Vector2 moveInput;
+    private Vector3 jumpInput;
+    private bool isGround;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
 
         moveAction = inputActions.FindAction("Move");
+        jumpAction = inputActions.FindAction("Jump");
 
         originalScale = transform.localScale;
+
+
     }
 
     void OnEnable()
@@ -57,6 +64,9 @@ public class CarController : MonoBehaviour
         moveAction.Enable();
         moveAction.performed += OnMovePerformed;
         moveAction.canceled += OnMoveCanceled;
+
+        jumpAction.Enable();
+        jumpAction.performed += OnJumpPerformed;
     }
 
     void OnDisable()
@@ -64,6 +74,9 @@ public class CarController : MonoBehaviour
         moveAction.performed -= OnMovePerformed;
         moveAction.canceled -= OnMoveCanceled;
         moveAction.Disable();
+
+        jumpAction.performed -= OnJumpPerformed;
+        jumpAction.Disable();
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)
@@ -74,6 +87,15 @@ public class CarController : MonoBehaviour
     private void OnMoveCanceled(InputAction.CallbackContext context)
     {
         moveInput = Vector2.zero;
+    }
+
+    private void OnJumpPerformed(InputAction.CallbackContext context)
+    {
+        if (isGround) 
+        {
+            isGround = false;
+            rb.AddForce(Vector3.up * 300, ForceMode.Impulse);
+        }
     }
 
     void FixedUpdate()
@@ -194,7 +216,15 @@ public class CarController : MonoBehaviour
             pointManager.ExtraPoint_Egg();
             Grow(pointManager.Extra_Egg);
         }
+        else if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGround = true;
+        }
     }
+
+
+
+
     public void Grow(float pointsEarned)
     {
         growPoint += pointsEarned;
