@@ -5,7 +5,7 @@ public class Object : MonoBehaviour
     public ObjectEnum TierObject;
     public float Point;
 
-    public float force = 10f;
+    public float force = 20f;
 
     private Rigidbody rb;
 
@@ -44,13 +44,13 @@ public class Object : MonoBehaviour
         switch (TierObject)
         {
             case ObjectEnum.Tier1:
-                Point = 10;
+                Point = 5;
                 break;
             case ObjectEnum.Tier2:
-                Point = 50;
+                Point = 10;
                 break;
             case ObjectEnum.Tier3:
-                Point = 100;
+                Point = 50;
                 break;
             case ObjectEnum.Tier4:
                 Point = 150;

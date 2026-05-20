@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
             TierBool.Add(false);
         }
 
-        updateTier(CurrentTier);
+        TierBool[0] = true; // Start with the first tier unlocked
     }
 
     // Update is called once per frame
@@ -36,6 +36,8 @@ public class LevelManager : MonoBehaviour
 
     public void updateTier(int index)
     {
+        CurrentTier = index;
+
         TierBool[index] = true;
         uiManager.showLevelUpPanel();
     }

@@ -62,11 +62,11 @@ public class PointManager : MonoBehaviour
         {
             LevelManager.updateTier(3);
         }
-        else if (TotalPoint >= 500 && LevelManager.CurrentTier < 2)//300)
+        else if (TotalPoint >= 300 && LevelManager.CurrentTier < 2)//300)
         {
             LevelManager.updateTier(2);
         }
-        else if (TotalPoint >= 15 && LevelManager.CurrentTier < 1)//50)
+        else if (TotalPoint >= 20 && LevelManager.CurrentTier < 1)//50)
         {
             LevelManager.updateTier(1);
         }

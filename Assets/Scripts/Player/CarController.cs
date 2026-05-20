@@ -214,7 +214,7 @@ public class CarController : MonoBehaviour
             Object tempObject = enemyObject.GetComponent<Object>();
             Rigidbody tempEnemyRb = enemyObject.GetComponent<Rigidbody>();
 
-
+          
             int tierIndex = (int)tempObject.TierObject;
 
             if (levelManager.TierBool[tierIndex])
@@ -232,6 +232,7 @@ public class CarController : MonoBehaviour
                         Vector3 direction = (enemyObject.transform.position - transform.position).normalized;
                         direction += Vector3.up;
                         tempEnemyRb.AddForce(direction * carStats.force, ForceMode.Impulse);
+                        tempObject.FlyAway((enemyObject.transform.position - transform.position).normalized + Vector3.up);
                     }
                     else
                     {
