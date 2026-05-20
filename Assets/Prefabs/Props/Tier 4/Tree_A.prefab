@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6be6ad815f9596246b4f32ae05156861, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65,6 +69,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6be6ad815f9596246b4f32ae05156861, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8776876883389843970}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6be6ad815f9596246b4f32ae05156861, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7944375715397756887}
   m_SourcePrefab: {fileID: 100100000, guid: 6be6ad815f9596246b4f32ae05156861, type: 3}
 --- !u!23 &7416066367126073270 stripped
 MeshRenderer:
@@ -90,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   TierObject: 3
   Point: 0
+  force: 10
+  isTouched: 0
 --- !u!65 &415119106589608466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -131,3 +140,30 @@ LODGroup:
     - renderer: {fileID: 7416066367126073270}
   m_Enabled: 1
   m_GlobalIlluminationLOD: 0
+--- !u!54 &7944375715397756887
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9073580489371733603}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

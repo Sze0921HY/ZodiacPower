@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mailbox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ec3f011e375bbf64a861f0fb290a931a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ec3f011e375bbf64a861f0fb290a931a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -62,6 +70,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ec3f011e375bbf64a861f0fb290a931a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4947297386891501150}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ec3f011e375bbf64a861f0fb290a931a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1887359262902303232}
   m_SourcePrefab: {fileID: 100100000, guid: ec3f011e375bbf64a861f0fb290a931a, type: 3}
 --- !u!1 &7522946603269566453 stripped
 GameObject:
@@ -82,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   TierObject: 1
   Point: 0
+  force: 10
+  isTouched: 0
 --- !u!65 &4947297386891501150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103,3 +116,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.0119324, y: 12.744127, z: 7.6920257}
   m_Center: {x: -0.11515808, y: 6.3720636, z: -0.031964302}
+--- !u!54 &-1887359262902303232
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7522946603269566453}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

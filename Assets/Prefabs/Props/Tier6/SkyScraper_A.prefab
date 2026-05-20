@@ -90,6 +90,7 @@ MonoBehaviour:
   TierObject: 5
   Point: 1000
   force: 10
+  isTouched: 0
 --- !u!65 &7182812853168407531
 BoxCollider:
   m_ObjectHideFlags: 0

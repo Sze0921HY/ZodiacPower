@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Umbrella (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14c425be6698a2c4b8ed46da30000ee7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -82,6 +86,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   TierObject: 0
   Point: 0
+  force: 10
+  isTouched: 0
 --- !u!65 &4536505319747750319
 BoxCollider:
   m_ObjectHideFlags: 0
