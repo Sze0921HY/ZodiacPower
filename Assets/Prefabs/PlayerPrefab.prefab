@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 4599005696010209505}
   - component: {fileID: 1744586414105771051}
   - component: {fileID: 1086616623080690322}
-  - component: {fileID: 690027054019531292}
   m_Layer: 6
   m_Name: MonsterTruckSuspension
   m_TagString: Untagged
@@ -147,29 +146,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 14.196822, y: 7.805574, z: 11.517334}
-  m_Center: {x: -0.31125695, y: -3.4295976, z: -1.4068604}
---- !u!65 &690027054019531292
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231645562893540862}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 14.196822, y: 7.805574, z: 11.517334}
-  m_Center: {x: -0.31125695, y: -3.4295976, z: -1.4068604}
+  m_Size: {x: 25.17761, y: 8.414945, z: 11.517334}
+  m_Center: {x: -0.035658482, y: -1.9371318, z: -1.4068604}
 --- !u!1 &398513322322304290
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466464017300916999}
+  - component: {fileID: 4173574666361781244}
   m_Layer: 6
   m_Name: MonsterTruckWheel (3)
   m_TagString: Untagged
@@ -404,6 +383,27 @@ Transform:
   - {fileID: 5296699019229762902}
   m_Father: {fileID: 611689951379113796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4173574666361781244
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951075504915042749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.1000266
+  m_Center: {x: 0, y: 0.21159202, z: 0}
 --- !u!1 &959693150541104768
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942648573857832112}
+  - component: {fileID: 5646985377198133848}
   m_Layer: 6
   m_Name: MonsterTruckWheel (2)
   m_TagString: Untagged
@@ -467,6 +468,27 @@ Transform:
   - {fileID: 6128622465470399201}
   m_Father: {fileID: 611689951379113796}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!135 &5646985377198133848
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278595929590941194}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4.924306
+  m_Center: {x: 0, y: -0.084181875, z: 0}
 --- !u!1 &1521975979005343340
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1648843420576997449}
+  - component: {fileID: 2868104655871218899}
   m_Layer: 6
   m_Name: MonsterTruckWheel
   m_TagString: Untagged
@@ -924,6 +947,27 @@ Transform:
   - {fileID: 6420250044999138840}
   m_Father: {fileID: 611689951379113796}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!135 &2868104655871218899
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137537424996907763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.2867746
+  m_Center: {x: 0, y: -0.33329612, z: 0}
 --- !u!1 &2693680649287393977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4480509722063447930}
+  - component: {fileID: 6400063357829873650}
   m_Layer: 6
   m_Name: MonsterTruckWheel (1)
   m_TagString: Untagged
@@ -1322,6 +1367,27 @@ Transform:
   - {fileID: 8202575438592489771}
   m_Father: {fileID: 611689951379113796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6400063357829873650
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3847806323269238208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.1141195
+  m_Center: {x: -0.015567989, y: -0.0048570335, z: 7.809869e-11}
 --- !u!1 &4221055871410359090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,16 +2854,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e2f48ccadcdf842a1f6c28c6f3d3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarController
-  acceleration: 25
+  acceleration: 30
   maxSpeed: 20
   turnSpeed: 100
   friction: 0.98
-  downForce: 1
+  downForce: 10
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  frontLeftWheel: {fileID: 4480509722063447930}
-  frontRightWheel: {fileID: 1648843420576997449}
-  rearLeftWheel: {fileID: 466464017300916999}
-  rearRightWheel: {fileID: 1942648573857832112}
+  frontLeftWheel: {fileID: 1942648573857832112}
+  frontRightWheel: {fileID: 466464017300916999}
+  rearLeftWheel: {fileID: 1648843420576997449}
+  rearRightWheel: {fileID: 4480509722063447930}
   wheelRadius: 0.5
   maxSteerAngle: 30
   pointThreshold: 100
@@ -2864,7 +2930,7 @@ Rigidbody:
   serializedVersion: 5
   m_Mass: 150
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2879,7 +2945,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 48
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!65 &3703347868253568514
 BoxCollider:
@@ -2919,7 +2985,7 @@ MonoBehaviour:
   Dragon: {fileID: 5755569924806732859}
   Rooster: {fileID: 959693150541104768}
   Tiger: {fileID: 9026625366570785216}
-  speed: 10
+  speed: 5.3
   scoreMultiplier: 1
   size: 1
   width: 1
