@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public List<Button> buttonList;
     public List<TextMeshProUGUI> buffnameList;
     public List<TextMeshProUGUI> descriptionsList;
-    
+    public int fix;    
 
     //References
     [SerializeField]
