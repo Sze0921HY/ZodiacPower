@@ -2806,6 +2806,7 @@ GameObject:
   - component: {fileID: 7064291393447710572}
   - component: {fileID: 2751559186356727171}
   - component: {fileID: 9026625366570785216}
+  - component: {fileID: 5595204729768628985}
   m_Layer: 6
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -2859,6 +2860,7 @@ MonoBehaviour:
   turnSpeed: 100
   friction: 0.98
   downForce: 10
+  jumpForce: 300
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   frontLeftWheel: {fileID: 1942648573857832112}
   frontRightWheel: {fileID: 466464017300916999}
@@ -2966,8 +2968,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 29.057678, y: 13.951498, z: 36.560528}
-  m_Center: {x: 0, y: -0.0872165, z: 0}
+  m_Size: {x: 20.27073, y: 5.27227, z: 5.766515}
+  m_Center: {x: -0.48617902, y: -4.4268274, z: 15.396784}
 --- !u!114 &6218218633132758809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3047,6 +3049,27 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 75
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &5595204729768628985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732897226437677558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20.417322, y: 6.009636, z: 5.48803}
+  m_Center: {x: -0.14891559, y: -5.0418844, z: -15.536156}
 --- !u!1 &9155860892789836328
 GameObject:
   m_ObjectHideFlags: 0
