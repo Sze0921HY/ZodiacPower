@@ -15,4 +15,4 @@ MonoBehaviour:
   CurrentBuff: 11
   buffDescription: Start rolling and have extra 50 points for every 30 seconds
   isContinue: 1
-  pointManager: {fileID: 3142597659215397428, guid: b015ac745ad22a941939fc96eba5ea10, type: 3}
+  pointManager: {fileID: 0}

@@ -12,13 +12,13 @@ public class CarStats : MonoBehaviour
     public SphereCollider Tiger;
 
     [Header("Basic stats Duration")]
-    public float speed = 10f;
-    public float scoreMultiplier = 1f;
-    public float size = 1f;
-    public float width = 1f;
-    public float jump = 1f;
-    public float force = 1f;
-    public float pullspeed = 1f;
+    public float speed = 10;
+    public float scoreMultiplier =1;
+    public float size = 1;
+    public float width = 1;
+    public float jump = 1;
+    public float force =1;
+    public float pullspeed = 1;
     public int maxPullNumber = 0;
 
     [Header("Event Duration")]
@@ -33,9 +33,15 @@ public class CarStats : MonoBehaviour
     public PointManager pointManager;
     public BuffManager buffManager;
 
+    private void Awake()
+    {
+
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
     }
 
     // Update is called once per frame

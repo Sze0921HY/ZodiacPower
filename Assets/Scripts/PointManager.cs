@@ -3,6 +3,7 @@ using UnityEngine;
 public class PointManager : MonoBehaviour
 {
     public LevelManager LevelManager;
+    public UIManager uiManager;
     public CarStats carStats;
     public float TotalPoint;
 
@@ -27,6 +28,8 @@ public class PointManager : MonoBehaviour
     public void addPoint(Object objectPoint)
     {
         TotalPoint = TotalPoint + objectPoint.Point * carStats.scoreMultiplier;
+        Debug.LogWarning(carStats.scoreMultiplier);
+        uiManager.updatePointUI(TotalPoint);
         checkPoint();
     }
 
@@ -43,23 +46,23 @@ public class PointManager : MonoBehaviour
 
     public void checkPoint()
     {
-        if (TotalPoint >= 10) //10000)
+        if (TotalPoint >= 10000) //10000)
         {
             LevelManager.updateTier(5);
         }
-        else if (TotalPoint >= 7) //5000)
+        else if (TotalPoint >= 5000) //5000)
         {
             LevelManager.updateTier(4);
         }
-        else if (TotalPoint >= 5) //1000)
+        else if (TotalPoint >= 1000) //1000)
         {
             LevelManager.updateTier(3);
         }
-        else if (TotalPoint >= 3)//300)
+        else if (TotalPoint >= 300)//300)
         {
             LevelManager.updateTier(2);
         }
-        else if (TotalPoint >= 2)//50)
+        else if (TotalPoint >= 15)//50)
         {
             LevelManager.updateTier(1);
         }

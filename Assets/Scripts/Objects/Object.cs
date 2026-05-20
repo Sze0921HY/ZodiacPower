@@ -39,22 +39,22 @@ public class Object : MonoBehaviour
         switch (TierObject)
         {
             case ObjectEnum.Tier1:
-                Point = 1;
-                break;
-            case ObjectEnum.Tier2:
-                Point = 5;
-                break;
-            case ObjectEnum.Tier3:
                 Point = 10;
                 break;
-            case ObjectEnum.Tier4:
-                Point = 15;
-                break;
-            case ObjectEnum.Tier5:
+            case ObjectEnum.Tier2:
                 Point = 50;
                 break;
-            case ObjectEnum.Tier6:
+            case ObjectEnum.Tier3:
                 Point = 100;
+                break;
+            case ObjectEnum.Tier4:
+                Point = 150;
+                break;
+            case ObjectEnum.Tier5:
+                Point = 500;
+                break;
+            case ObjectEnum.Tier6:
+                Point = 1000;
                 break;
         }
     }

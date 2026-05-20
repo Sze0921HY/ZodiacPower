@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public TextMeshProUGUI pointText;
     public GameObject LevelUpPanel;
     public List<Button> buttonList;
     public List<TextMeshProUGUI> buffnameList;
@@ -15,11 +16,14 @@ public class UIManager : MonoBehaviour
     private BuffManager buffManager;
 
 
+
+
     public int currentDescriptionIndex = 0;
 
     private void Awake()
     {
         buffManager = GetComponent<BuffManager>();
+        updatePointUI(0);
     }
 
     void Start()
@@ -37,6 +41,11 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         buffManager.levelUp();
         
+    }
+
+    public void updatePointUI(float point)
+    {
+        pointText.text = point.ToString();
     }
 
     public void buttonClick(int currentButton)

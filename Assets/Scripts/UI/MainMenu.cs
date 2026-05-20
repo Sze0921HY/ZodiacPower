@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     void startButton()
     {
-        SceneManager.LoadScene("InGame");
+        SceneManager.LoadScene("CityLevel");
     }
 
     void creditButton()
