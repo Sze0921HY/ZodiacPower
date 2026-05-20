@@ -22,7 +22,7 @@ public class CarStats : MonoBehaviour
     public int maxPullNumber = 0;
 
     [Header("Event Duration")]
-    public float RoosterAbility = 5f;
+    public float RoosterAbility = 60f;
     public float PigAbility = 5f;
 
 

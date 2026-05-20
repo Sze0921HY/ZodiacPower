@@ -36,11 +36,15 @@ public class PointManager : MonoBehaviour
     public void ExtraPoint_Egg()
     {
         TotalPoint += Extra_Egg;
+        uiManager.updatePointUI(TotalPoint);
+        checkPoint();
     }
 
     public void ExtraPoint_Pig()
     {
         TotalPoint += Extra_Pig;
+        uiManager.updatePointUI(TotalPoint);
+        checkPoint();
     }
 
 
@@ -58,7 +62,7 @@ public class PointManager : MonoBehaviour
         {
             LevelManager.updateTier(3);
         }
-        else if (TotalPoint >= 300 && LevelManager.CurrentTier < 2)//300)
+        else if (TotalPoint >= 500 && LevelManager.CurrentTier < 2)//300)
         {
             LevelManager.updateTier(2);
         }

@@ -27,6 +27,9 @@ public class Object : MonoBehaviour
         rb.linearVelocity = Vector3.zero; // optional reset
 
         rb.AddForce(hitDirection * force, ForceMode.Impulse);
+
+        // Despawn after 3 seconds
+        Destroy(gameObject, 3f);
     }
 
     // Update is called once per frame

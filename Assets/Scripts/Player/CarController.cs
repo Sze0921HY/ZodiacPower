@@ -164,19 +164,7 @@ public class CarController : MonoBehaviour
     }
     void UpdateWheels()
     {
-        // Calculate steering angle for front wheels
-        float steerAngle = moveInput.x * maxSteerAngle;
-
-        // Rotate front wheels for steering
-        if (frontLeftWheel != null)
-        {
-            frontLeftWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
-        }
-        if (frontRightWheel != null)
-        {
-            frontRightWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
-        }
-
+       
         // if wheel go forward rotate forward, if wheel go backward rotate backward
         float speed = rb.linearVelocity.magnitude;
         float speedDirection = Vector3.Dot(rb.linearVelocity, transform.forward);
@@ -193,12 +181,27 @@ public class CarController : MonoBehaviour
         }
         if (rearLeftWheel != null)
         {
-            rearLeftWheel.Rotate(wheelRotation * Mathf.Sign(speedDirection), 0, 0);
+            rearLeftWheel.Rotate(wheelRotation * Mathf.Sign(-speedDirection), 0, 0);
         }
         if (rearRightWheel != null)
         {
             rearRightWheel.Rotate(wheelRotation * Mathf.Sign(speedDirection), 0, 0);
         }
+
+        // Calculate steering angle for front wheels
+        float steerAngle = moveInput.x * maxSteerAngle;
+
+        // Rotate front wheels for steering
+        if (frontLeftWheel != null)
+        {
+            frontLeftWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
+        }
+        if (frontRightWheel != null)
+        {
+            frontRightWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
+        }
+
+       
     }
 
 
@@ -274,7 +277,7 @@ public class CarController : MonoBehaviour
             //local scale increase by growth multiplier, so it grows by a percentage of its current size rather than a fixed amount
             transform.localScale += Vector3.one * growthMultiplier;
             // Increase next threshold
-            pointThreshold += 500f;
+            pointThreshold += 850f;
 
             Debug.Log("Player Grew!");
             Debug.Log("Next Growth Threshold: " + pointThreshold);

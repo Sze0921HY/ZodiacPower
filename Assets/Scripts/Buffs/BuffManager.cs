@@ -30,10 +30,20 @@ public class BuffManager : MonoBehaviour
     }
 
 
-    public void levelUp()
+    public bool levelUp()
     {
+        if (BuffPool.Count == 0)
+        {
+            Debug.Log("No more buffs available");
+
+           
+
+            return false;
+        }
+
         shuffle();
         ThreeBuffs();
+        return true;
     }
 
 
@@ -58,45 +68,50 @@ public class BuffManager : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             offeredBuffList.Add(BuffPool[i]);
-            UImanager.AssignText(BuffPool[i]);
+            UImanager.AssignText(i, BuffPool[i]);
         }
+
+        // Hide extra buttons
+        UImanager.HideUnusedButtons(count);
     }
 
-    public void pickBuff(int index)
+    // no longer a void method, now returns a bool to indicate success or failure of picking a buff
+    public bool pickBuff(int index)
     {
-        Buff buff = offeredBuffList[index];
+        if (index < 0 || index >= offeredBuffList.Count)
+        {
+            Debug.LogError($"Invalid buff index: {index}");
+            return false;
+        }
 
+        Buff buff = offeredBuffList[index];
         buff.Apply(carSats);
         Debug.Log($"Unlocked buff: {buff}");
-
-
 
         if (buff.isContinue)
         {
             switch (buff.CurrentBuff)
             {
                 case BuffEnum.Rooster:
-                    StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.RoosterAbility));
-                    break;
-                case BuffEnum.Pig:
-                    StartCoroutine(routine: RepeatEventBuffDuration(buff, carSats.PigAbility));
+                    StartCoroutine(RepeatEventBuffDuration(buff, carSats.RoosterAbility));
                     break;
 
+                case BuffEnum.Pig:
+                    StartCoroutine(RepeatEventBuffDuration(buff, carSats.PigAbility));
+                    break;
             }
         }
-        
 
         carBuff.AssignBuff(buff);
 
         BuffPool.Remove(buff);
 
-        //Debug.Log(offeredBuffList[index]);
-
         offeredBuffList.Clear();
+
         UImanager.ResetUI();
 
         Time.timeScale = 1f;
-
+        return true;
     }
 
     public void HandleMonkey(Buff buff)
@@ -114,11 +129,16 @@ public class BuffManager : MonoBehaviour
         }
     }
 
+    //made a coroutine for the events cause egg was spamming hella
     private IEnumerator RepeatEventBuffDuration(Buff buff, float time)
     {
-        yield return new WaitForSeconds(time);
-        Debug.Log($"Current buff: {buff}, Duration: {time}");
-        buff.Apply(carSats);
-        StartCoroutine(RepeatEventBuffDuration(buff, time));
+        while (true)
+        {
+            yield return new WaitForSeconds(time);
+
+            Debug.Log($"{buff}, Duration: {time}");
+
+            buff.Apply(carSats);
+        }
     }
 }

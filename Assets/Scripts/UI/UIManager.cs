@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class UIManager : MonoBehaviour
     public List<Button> buttonList;
     public List<TextMeshProUGUI> buffnameList;
     public List<TextMeshProUGUI> descriptionsList;
+    
 
     //References
     [SerializeField]
@@ -37,6 +39,13 @@ public class UIManager : MonoBehaviour
 
     public void showLevelUpPanel()
     {
+        //before showing the canvas thing, this checks to see if we have any buffs or not
+        bool hasBuff = buffManager.levelUp();
+        if (!hasBuff)
+        {
+            Debug.Log("No more buffs to offer");
+            return;
+        }
         LevelUpPanel.SetActive(true);
         Time.timeScale = 0f;
         buffManager.levelUp();
@@ -52,9 +61,12 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("Current Button:" + currentButton);
 
-        buffManager.pickBuff(currentButton);
+        bool success = buffManager.pickBuff(currentButton);
 
-        closeLevelUpPanel();
+        if (success)
+        {
+            closeLevelUpPanel();
+        }
     }
 
     public void closeLevelUpPanel()
@@ -62,19 +74,33 @@ public class UIManager : MonoBehaviour
         LevelUpPanel.SetActive(false);
     }
 
-
-    public void AssignText(Buff buff)
+    //assigns the text and image of the button based on the buff that is being offered, using the index to determine which button to change <-- copilot made this comment for me
+    public void AssignText(int index, Buff buff)
     {
-        buffnameList[currentDescriptionIndex].text = buff.CurrentBuff.ToString();
-        descriptionsList[currentDescriptionIndex].text = buff.buffDescription;
-        Image tempImage = buttonList[currentDescriptionIndex].GetComponent<Image>();
+        buffnameList[index].text = buff.CurrentBuff.ToString();
+
+        descriptionsList[index].text = buff.buffDescription;
+
+        Image tempImage = buttonList[index].GetComponent<Image>();
+
         tempImage.sprite = buff.sprite;
-
-        currentDescriptionIndex++;
     }
-
+    //changes the UI back to default state, making all buttons active and resetting the description index because it wasn't accurate after how i changed it
     public void ResetUI()
     {
         currentDescriptionIndex = 0;
+
+        for (int i = 0; i < buttonList.Count; i++)
+        {
+            buttonList[i].gameObject.SetActive(true);
+        }
+    }
+
+    public void HideUnusedButtons(int activeCount)
+    {
+        for (int i = 0; i < buttonList.Count; i++)
+        {
+            buttonList[i].gameObject.SetActive(i < activeCount);
+        }
     }
 }

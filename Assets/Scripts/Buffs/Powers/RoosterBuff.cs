@@ -10,10 +10,13 @@ public class RoosterBuff: Buff
     public float spawnDuration;
 
 
+   
+
     public override void Apply(CarStats stats)
     {
         SpawnEgg(stats);
     }
+ 
 
     public void SpawnEgg(CarStats stats)
     {
