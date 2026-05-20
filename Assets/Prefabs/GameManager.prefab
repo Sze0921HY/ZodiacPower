@@ -62,7 +62,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdf1ddcb2cd2e9c468124f7a46f73d1d, type: 2}
   BuffPool: []
   offeredBuffList: []
-  player: {fileID: 0}
+  player: {fileID: 8732897226437677558, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
   UImanager: {fileID: 2205050812387610780}
 --- !u!114 &2205050812387610780
 MonoBehaviour:
@@ -89,6 +89,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  buffManager: {fileID: 640331855995304067}
   currentDescriptionIndex: 0
 --- !u!114 &8044244125618580350
 MonoBehaviour:
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   pointManger: {fileID: 3142597659215397428}
+  uiManager: {fileID: 2205050812387610780}
   CurrentTier: 0
   MaxTier: 0
   TierBool: 
@@ -119,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PointManager
   LevelManager: {fileID: 8044244125618580350}
-  carStats: {fileID: 0}
+  carStats: {fileID: 6218218633132758809, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
   TotalPoint: 0
   Extra_Egg: 150
   Extra_Pig: 50
