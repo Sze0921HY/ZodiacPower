@@ -10,5 +10,6 @@ public class Buff : ScriptableObject
 
     public bool isContinue;
 
+    public Sprite sprite;
     public virtual void Apply(CarStats stats) { }
 }

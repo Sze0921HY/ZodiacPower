@@ -16,5 +16,6 @@ MonoBehaviour:
   buffDescription: Start laying egg in every 1 min, 150 points to each egg if you
     run over
   isContinue: 1
+  sprite: {fileID: 21300000, guid: 4c0e31085e3d3fb408502cf1cd8b8e86, type: 3}
   eggsPrefab: {fileID: 6915685978001341770, guid: 8a91ae39867af5446b2a5474eb93ce5f, type: 3}
   spawnDuration: 0

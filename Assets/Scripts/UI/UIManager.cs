@@ -67,7 +67,9 @@ public class UIManager : MonoBehaviour
     {
         buffnameList[currentDescriptionIndex].text = buff.CurrentBuff.ToString();
         descriptionsList[currentDescriptionIndex].text = buff.buffDescription;
-        
+        Image tempImage = buttonList[currentDescriptionIndex].GetComponent<Image>();
+        tempImage.sprite = buff.sprite;
+
         currentDescriptionIndex++;
     }
 
