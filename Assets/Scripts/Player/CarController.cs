@@ -95,7 +95,7 @@ public class CarController : MonoBehaviour
 
     private void OnJumpPerformed(InputAction.CallbackContext context)
     {
-        if (isGround) 
+        if (isGround)
         {
             isGround = false;
             rb.AddForce(Vector3.up * jumpForce * carStats.jump, ForceMode.Impulse);
@@ -164,7 +164,7 @@ public class CarController : MonoBehaviour
     }
     void UpdateWheels()
     {
-       
+
         // if wheel go forward rotate forward, if wheel go backward rotate backward
         float speed = rb.linearVelocity.magnitude;
         float speedDirection = Vector3.Dot(rb.linearVelocity, transform.forward);
@@ -201,7 +201,7 @@ public class CarController : MonoBehaviour
             frontRightWheel.localRotation = Quaternion.Euler(0, steerAngle, 0);
         }
 
-       
+
     }
 
 
@@ -214,7 +214,7 @@ public class CarController : MonoBehaviour
             Object tempObject = enemyObject.GetComponent<Object>();
             Rigidbody tempEnemyRb = enemyObject.GetComponent<Rigidbody>();
 
-          
+
             int tierIndex = (int)tempObject.TierObject;
 
             if (levelManager.TierBool[tierIndex])
@@ -282,7 +282,21 @@ public class CarController : MonoBehaviour
 
             Debug.Log("Player Grew!");
             Debug.Log("Next Growth Threshold: " + pointThreshold);
+
+            // Check current scale
+            if (transform.localScale.x > 0.4f)
+            {
+                // Increase acceleration
+                acceleration += 20f;
+
+                // Add 10 to max speed
+                maxSpeed += 10f;
+
+                Debug.Log("Acceleration Increased!");
+                Debug.Log("New Max Speed: " + maxSpeed);
+            }
         }
     }
-
 }
+    
+

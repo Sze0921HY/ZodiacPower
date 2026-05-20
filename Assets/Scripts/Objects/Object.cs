@@ -5,7 +5,7 @@ public class Object : MonoBehaviour
     public ObjectEnum TierObject;
     public float Point;
 
-    public float force = 20f;
+    public float force = 0f;
 
     private Rigidbody rb;
 
