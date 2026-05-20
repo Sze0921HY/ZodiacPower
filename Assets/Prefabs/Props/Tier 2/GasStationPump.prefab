@@ -63,6 +63,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fb44046dd39e5864081b294a0d68c3b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9064499544618632250}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fb44046dd39e5864081b294a0d68c3b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7786961918090613212}
   m_SourcePrefab: {fileID: 100100000, guid: fb44046dd39e5864081b294a0d68c3b9, type: 3}
 --- !u!1 &5708482072857960498 stripped
 GameObject:
@@ -96,3 +99,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7786961918090613212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708482072857960498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa70200df68ee194abcaae5228078d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Object
+  TierObject: 1
+  Point: 0
+  force: 10
+  isTouched: 0
