@@ -42,5 +42,6 @@ public class LevelManager : MonoBehaviour
         TierBool[index] = true;
         uiManager.showLevelUpPanel();
         carStats.updateIndex();
+        uiManager.updateTierText(index);
     }
 }

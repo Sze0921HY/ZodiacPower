@@ -56,8 +56,6 @@ public class SnakeBuff : Buff
 
                 dir.y = 0;
 
-                Debug.Log("Sucking" + hit.ToString());
-
                 hit.attachedRigidbody.AddForce(
                     dir.normalized * pullSpeed,
                     ForceMode.Acceleration
