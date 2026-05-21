@@ -12,8 +12,9 @@ public class GameTimer : MonoBehaviour
     public PointManager pointManager;
     public TMP_Text timerText;
     public TMP_Text finalPointsText;
+    [SerializeField] private GameObject TimerEndUI;
 
-    
+
 
     void Update()
     {
@@ -52,17 +53,11 @@ public class GameTimer : MonoBehaviour
         Debug.Log("Score at finish: " + pointManager.TotalPoint);
 
         
-
+        TimerEndUI.SetActive(true);
         finalPointsText.text = $"Final Score: {pointManager.TotalPoint:0}";
 
-    }
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+        Time.timeScale = 0f;
 
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
+    
 }

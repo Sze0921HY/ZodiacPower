@@ -1,18 +1,22 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI pointText;
+    public TextMeshProUGUI tierText;
+
     public GameObject LevelUpPanel;
 
     public List<Button> buttonList;
     //public List<TextMeshProUGUI> buffnameList;
     public List<TextMeshProUGUI> descriptionsList;
     public List<Image> iconList;    
+
 
     //References
     [SerializeField]
@@ -42,6 +46,7 @@ public class UIManager : MonoBehaviour
         
         barSlider.maxValue = MaxValue;
         barSlider.value = currentValue;
+        updateTierText(0);
     }
 
     void Start()
@@ -142,5 +147,22 @@ public class UIManager : MonoBehaviour
         {
             buttonList[i].gameObject.SetActive(i < activeCount);
         }
+    }
+
+
+    public void updateTierText(int index)
+    {
+        tierText.text = "TIER" + index;
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+
     }
 }
