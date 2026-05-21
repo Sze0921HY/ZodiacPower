@@ -9,15 +9,13 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI pointText;
     public GameObject LevelUpPanel;
     public List<Button> buttonList;
-    public List<TextMeshProUGUI> buffnameList;
+    //public List<TextMeshProUGUI> buffnameList;
     public List<TextMeshProUGUI> descriptionsList;
-    public int fix;    
+    public List<Image> iconList;    
 
     //References
     [SerializeField]
     private BuffManager buffManager;
-
-
 
 
     public int currentDescriptionIndex = 0;
@@ -35,6 +33,9 @@ public class UIManager : MonoBehaviour
             int index = i;
             buttonList[i].onClick.AddListener(() => buttonClick(index));
         }
+
+        //Testing
+       showLevelUpPanel();
     }
 
     public void showLevelUpPanel()
@@ -77,10 +78,11 @@ public class UIManager : MonoBehaviour
     //assigns the text and image of the button based on the buff that is being offered, using the index to determine which button to change <-- copilot made this comment for me
     public void AssignText(int index, Buff buff)
     {
-        buffnameList[index].text = buff.CurrentBuff.ToString();
+        //buffnameList[index].text = buff.CurrentBuff.ToString();
 
         descriptionsList[index].text = buff.buffDescription;
 
+        iconList[index].sprite = buff.sprite;
 
     }
     //changes the UI back to default state, making all buttons active and resetting the description index because it wasn't accurate after how i changed it
