@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameTimer : MonoBehaviour
     [Header("References")]
     public PointManager pointManager;
     public TMP_Text timerText;
+    public TMP_Text finalPointsText;
+
+    
 
     void Update()
     {
@@ -44,7 +48,21 @@ public class GameTimer : MonoBehaviour
 
         Debug.Log("TIME UP!");
         Debug.Log("Final Score: " + finalPoints);
+        Debug.Log("PointManager instance: " + pointManager.gameObject.name);
+        Debug.Log("Score at finish: " + pointManager.TotalPoint);
 
-   
+        
+
+        finalPointsText.text = $"Final Score: {pointManager.TotalPoint:0}";
+
+    }
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
