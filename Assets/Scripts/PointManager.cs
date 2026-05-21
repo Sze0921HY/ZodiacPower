@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public class PointManager : MonoBehaviour
@@ -6,16 +8,19 @@ public class PointManager : MonoBehaviour
     public UIManager uiManager;
     public CarStats carStats;
     public float TotalPoint;
+    public List<float> targetPoint;
 
     [Header("Extra Points")]
     public float Extra_Egg = 150;
     public float Extra_Pig = 50;
 
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         TotalPoint = 0;
+ 
     }
 
     // Update is called once per frame
@@ -30,6 +35,7 @@ public class PointManager : MonoBehaviour
         TotalPoint = TotalPoint + objectPoint.Point * carStats.scoreMultiplier;
         Debug.LogWarning(carStats.scoreMultiplier);
         uiManager.updatePointUI(TotalPoint);
+        uiManager.updateBar(objectPoint.Point);
         checkPoint();
     }
 

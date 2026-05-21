@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI pointText;
     public GameObject LevelUpPanel;
+
     public List<Button> buttonList;
     //public List<TextMeshProUGUI> buffnameList;
     public List<TextMeshProUGUI> descriptionsList;
@@ -16,7 +17,17 @@ public class UIManager : MonoBehaviour
     //References
     [SerializeField]
     private BuffManager buffManager;
+    [SerializeField]
+    private PointManager pointManager;
+    [SerializeField]
+    private LevelManager levelManager;
 
+
+    [Header("Bar Setting")]
+    public Slider barSlider;
+    public float MaxValue;
+    public float currentValue;
+    public int currentTier;
 
     public int currentDescriptionIndex = 0;
 
@@ -24,6 +35,13 @@ public class UIManager : MonoBehaviour
     {
         buffManager = GetComponent<BuffManager>();
         updatePointUI(0);
+        currentTier = 0;
+
+        MaxValue = pointManager.targetPoint[currentTier];
+        currentValue = pointManager.TotalPoint;
+        
+        barSlider.maxValue = MaxValue;
+        barSlider.value = currentValue;
     }
 
     void Start()
@@ -35,8 +53,30 @@ public class UIManager : MonoBehaviour
         }
 
         //Testing
-       showLevelUpPanel();
+       //showLevelUpPanel();
     }
+
+
+    public void updateBar(float pointGain)
+    {
+        currentValue += pointGain;
+
+        if (currentValue >= MaxValue)
+        {
+            currentValue -= MaxValue;
+
+            currentTier++;
+
+            float previousTarget = pointManager.targetPoint[currentTier - 1];
+            float currentTarget = pointManager.targetPoint[currentTier];
+
+            MaxValue = currentTarget - previousTarget;
+        }
+
+        barSlider.maxValue = MaxValue;
+        barSlider.value = currentValue;
+    }
+
 
     public void showLevelUpPanel()
     {
