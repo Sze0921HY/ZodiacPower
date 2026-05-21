@@ -14,6 +14,8 @@ public class CameraZoom : MonoBehaviour
     public float normalZOffset = -3f;
     public float zoomedZOffset = -5f;
     public float zoomedYOffset = 2f;
+    public float largeZoomedZOffset = -7f;
+    public float largeScaleThreshold = 0.1f;
 
     void Start()
     {
@@ -30,15 +32,21 @@ public class CameraZoom : MonoBehaviour
 
         Vector3 shoulderOffset = thirdPersonFollow.ShoulderOffset;
 
-        if (currentScale > scaleThreshold)
+        // Highest threshold first
+        if (currentScale > largeScaleThreshold)
+        {
+            shoulderOffset.z = largeZoomedZOffset;
+            shoulderOffset.y = 2.5f;
+        }
+        else if (currentScale > scaleThreshold)
         {
             shoulderOffset.z = zoomedZOffset;
-            shoulderOffset.y = 1.5f; // Apply Y offset when zoomed in
+            shoulderOffset.y = 1.5f;
         }
         else
         {
             shoulderOffset.z = normalZOffset;
-            shoulderOffset.y = 0f; // Reset Y offset when not zoomed in
+            shoulderOffset.y = 0f;
         }
 
         thirdPersonFollow.ShoulderOffset = shoulderOffset;
