@@ -160,6 +160,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c53aded6d7561e84fb8ab3d518fa725c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f6715b6617a0e5c449213af4f8c2fb1b, type: 2}
     - target: {fileID: 919132149155446097, guid: c53aded6d7561e84fb8ab3d518fa725c, type: 3}
       propertyPath: m_Name
       value: Skyscraper_C
