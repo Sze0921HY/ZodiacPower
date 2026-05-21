@@ -51,6 +51,10 @@ public class CarController : MonoBehaviour
     private Vector3 jumpInput;
     private bool isGround;
 
+    [Header("Audio")]
+    public AudioSource drivingAudio;
+    public float minMoveSpeed = 0.5f;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -155,13 +159,17 @@ public class CarController : MonoBehaviour
                     uprightSpeed * Time.fixedDeltaTime
                 )
             );
+           
         }
 
 
 
         // Update wheel rotations
         UpdateWheels();
+
+        HandleDrivingAudio();
     }
+
     void UpdateWheels()
     {
 
@@ -294,6 +302,26 @@ public class CarController : MonoBehaviour
 
                 Debug.Log("Acceleration Increased!");
                 Debug.Log("New Max Speed: " + maxSpeed);
+            }
+        }
+    }
+
+    void HandleDrivingAudio()
+    {
+        bool isMoving = rb.linearVelocity.magnitude > minMoveSpeed;
+
+        if (isMoving)
+        {
+            if (!drivingAudio.isPlaying)
+            {
+                drivingAudio.Play();
+            }
+        }
+        else
+        {
+            if (drivingAudio.isPlaying)
+            {
+                drivingAudio.Stop();
             }
         }
     }
