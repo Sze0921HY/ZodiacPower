@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -55,6 +55,10 @@ public class CarController : MonoBehaviour
     public AudioSource drivingAudio;
     public float minMoveSpeed = 0.5f;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
