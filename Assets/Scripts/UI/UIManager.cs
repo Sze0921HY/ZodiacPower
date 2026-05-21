@@ -153,6 +153,7 @@ public class UIManager : MonoBehaviour
     public void updateTierText(int index)
     {
         tierText.text = "TIER" + index;
+    }
 
     public void RestartLevel()
     {
