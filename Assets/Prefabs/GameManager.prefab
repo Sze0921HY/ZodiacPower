@@ -50,19 +50,10 @@ MonoBehaviour:
   BuffList:
   - {fileID: 11400000, guid: d5d70679e0691ea47997ab0f4b9e8895, type: 2}
   - {fileID: 11400000, guid: 4732ac55850d38745a2335404ffedfb6, type: 2}
-  - {fileID: 11400000, guid: 3ee56655fc521e64dbe7b8e68e71e806, type: 2}
-  - {fileID: 11400000, guid: 5049f6b11fdc76e4391ee50f66e3e052, type: 2}
-  - {fileID: 11400000, guid: ec8792300beeb904e901d0083d7f5209, type: 2}
   - {fileID: 11400000, guid: 2b702013b8c844345907a18ea2b59b2b, type: 2}
-  - {fileID: 11400000, guid: e7f909b8950bd9e47944c47aff5c8876, type: 2}
-  - {fileID: 11400000, guid: 980f13139a0ff6e4390b84b0f5f40f72, type: 2}
-  - {fileID: 11400000, guid: f25375a350161024c93d38f880a12e52, type: 2}
-  - {fileID: 11400000, guid: 889afbde48e69574187c14fb94f476e6, type: 2}
-  - {fileID: 11400000, guid: 738776cfa6df71c44b4b661caf3be08f, type: 2}
-  - {fileID: 11400000, guid: cdf1ddcb2cd2e9c468124f7a46f73d1d, type: 2}
   BuffPool: []
   offeredBuffList: []
-  player: {fileID: 8732897226437677558, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
+  player: {fileID: 0}
   UImanager: {fileID: 2205050812387610780}
 --- !u!114 &2205050812387610780
 MonoBehaviour:
@@ -82,16 +73,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  buffnameList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   descriptionsList:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fix: 4
+  iconList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   buffManager: {fileID: 640331855995304067}
+  pointManager: {fileID: 3142597659215397428}
+  levelManager: {fileID: 8044244125618580350}
+  barSlider: {fileID: 0}
+  MaxValue: 0
+  currentValue: 0
+  currentTier: 0
   currentDescriptionIndex: 0
 --- !u!114 &8044244125618580350
 MonoBehaviour:
@@ -108,7 +104,7 @@ MonoBehaviour:
   pointManger: {fileID: 3142597659215397428}
   uiManager: {fileID: 2205050812387610780}
   CurrentTier: 0
-  MaxTier: 0
+  MaxTier: 6
   TierBool: 
 --- !u!114 &3142597659215397428
 MonoBehaviour:
@@ -123,8 +119,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PointManager
   LevelManager: {fileID: 8044244125618580350}
-  uiManager: {fileID: 0}
+  uiManager: {fileID: 2205050812387610780}
   carStats: {fileID: 6218218633132758809, guid: 189a5c6a3593b074eb3f8db61a23f23b, type: 3}
   TotalPoint: 0
+  targetPoint:
+  - 20
+  - 300
+  - 1000
+  - 5000
+  - 10000
   Extra_Egg: 150
   Extra_Pig: 50

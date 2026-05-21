@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     [Header("References")]
     public PointManager pointManger;
     public UIManager uiManager;
+    public CarStats carStats;
 
     [Header("Level Setting")]
     public int CurrentTier = 0;
@@ -40,5 +41,6 @@ public class LevelManager : MonoBehaviour
 
         TierBool[index] = true;
         uiManager.showLevelUpPanel();
+        carStats.updateIndex();
     }
 }

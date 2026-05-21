@@ -25,6 +25,8 @@ public class CarStats : MonoBehaviour
     public float RoosterAbility = 60f;
     public float PigAbility = 5f;
 
+    public int currentIndex;
+
 
     public UIManager UImanager;
 
@@ -32,15 +34,17 @@ public class CarStats : MonoBehaviour
     //Refereces
     public PointManager pointManager;
     public BuffManager buffManager;
+    public LevelManager levelManager;
 
     private void Awake()
     {
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        currentIndex = levelManager.CurrentTier;
     }
 
     // Update is called once per frame
@@ -55,12 +59,16 @@ public class CarStats : MonoBehaviour
 
     }
 
+    public void updateIndex()
+    {
+        currentIndex++;
+    }
 
 
-    //Testing Purpose//
+/*    //Testing Purpose//
     public void OnLevelUp(InputValue value)
     {
         UImanager.showLevelUpPanel();
-    }
+    }*/
 
 }

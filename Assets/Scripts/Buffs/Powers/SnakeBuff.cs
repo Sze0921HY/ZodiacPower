@@ -7,6 +7,7 @@ public class SnakeBuff : Buff
     public float radius = 2f;
     public float pullSpeed = 2f;
     public int maxPullNumber = 2;
+    public CarStats carStats;
 
     public override void Apply(CarStats stats)
     {
@@ -33,20 +34,29 @@ public class SnakeBuff : Buff
 
                 Object obj = hit.GetComponent<Object>();
 
-                if (!(obj.TierObject == ObjectEnum.Tier1 || obj.TierObject == ObjectEnum.Tier2 || obj.TierObject == ObjectEnum.Tier3)) continue;
+                carStats = stats.GetComponent<CarStats>();
 
+                if ((int)obj.TierObject > carStats.currentIndex)
+                    continue;
 
                 //if it doesn't have rigidbody
                 if (hit.attachedRigidbody == null) continue;
-
 
                 //if already pulled 2 objects
                 if (pulledCount >= maxPullNumber)
                     break;
 
                 //Debug.LogWarning(hits);
+
+                Rigidbody tempRg = hit.attachedRigidbody;
+
+                tempRg.isKinematic = false;
+
                 Vector3 dir = stats.transform.position - hit.transform.position;
+
                 dir.y = 0;
+
+                Debug.Log("Sucking" + hit.ToString());
 
                 hit.attachedRigidbody.AddForce(
                     dir.normalized * pullSpeed,

@@ -17,5 +17,6 @@ MonoBehaviour:
   isContinue: 0
   sprite: {fileID: 21300000, guid: 2edd04e9ac0810d4fbd1208c24e174a7, type: 3}
   radius: 2
-  pullSpeed: 2
+  pullSpeed: 100
   maxPullNumber: 2
+  carStats: {fileID: 0}
