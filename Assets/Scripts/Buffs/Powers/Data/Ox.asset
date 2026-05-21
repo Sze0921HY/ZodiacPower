@@ -15,5 +15,5 @@ MonoBehaviour:
   CurrentBuff: 1
   buffDescription: Seems like eating too much, make the car 1.5 wider
   isContinue: 0
-  sprite: {fileID: 21300000, guid: 75b9163effbfe3945bcd4b02ece319be, type: 3}
+  sprite: {fileID: 21300000, guid: 0361fc29e05011847a2ae4757a2080ed, type: 3}
   multiplier: 2

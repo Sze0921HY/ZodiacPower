@@ -15,4 +15,4 @@ MonoBehaviour:
   CurrentBuff: 4
   buffDescription: Powerful Attack To 1.5 In Front
   isContinue: 0
-  sprite: {fileID: 21300000, guid: e209f0dc8d73ffc4cab80ba415251006, type: 3}
+  sprite: {fileID: 21300000, guid: 6599b8c033969e84bac3beeee3415d91, type: 3}

@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public List<Button> buttonList;
     public List<TextMeshProUGUI> buffnameList;
     public List<TextMeshProUGUI> descriptionsList;
-    
+    public int fix;    
 
     //References
     [SerializeField]
@@ -81,9 +81,7 @@ public class UIManager : MonoBehaviour
 
         descriptionsList[index].text = buff.buffDescription;
 
-        Image tempImage = buttonList[index].GetComponent<Image>();
 
-        tempImage.sprite = buff.sprite;
     }
     //changes the UI back to default state, making all buttons active and resetting the description index because it wasn't accurate after how i changed it
     public void ResetUI()
