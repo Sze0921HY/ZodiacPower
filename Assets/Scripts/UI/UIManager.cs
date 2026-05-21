@@ -81,7 +81,6 @@ public class UIManager : MonoBehaviour
 
         descriptionsList[index].text = buff.buffDescription;
 
-        iconList[index] = buff.sprite; 
 
     }
     //changes the UI back to default state, making all buttons active and resetting the description index because it wasn't accurate after how i changed it
